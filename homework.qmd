@@ -1,0 +1,22 @@
+---
+title: "Homework"
+---
+
+# Unit 1 homework (due Sunday, January 19 at 23:59:00) 
+
+  - [Unit 1 homework]
+  - [Unit 1 homework sample solutions]
+
+# Unit 2 homework (due Tuesday, February 4 at 23:59:00) 
+
+  - [Unit 2 homework]
+  - [Unit 2 homework sample solutions]
+
+# Unit 3 exam (Wednesday, February 19 from 2:45 to 4:00 pm) 
+
+  - [Unit 3 exam]
+  - [Unit 3 exam sample solutions]
+
+# Final project (due Wednesday, March 5 at 23:59:00) 
+
+  - [Final project](homeworks/Final project/final.project.zip)
