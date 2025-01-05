@@ -8,10 +8,10 @@ project:
     - "!labs"
     - "!lectures"
   
-name: "dku-stats-101-fall2024"
+name: "dku-stats-101-spr2025s3"
 
 website:
-  title: "DKU Stats 101 - Fall 2024"
+  title: "DKU Stats 101 - Spring 2025 S3"
   navbar: 
     left:
       - text: "Course Introduction"
@@ -24,7 +24,7 @@ website:
         href: rmanual.html
     right: 
       - icon: github
-        href: https://github.com/andrewmacd/dkustats101fall2024
+        href: https://github.com/andrewmacd/dkustats101spr2025s3
 
 format:
   html:
