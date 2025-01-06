@@ -71,7 +71,7 @@ We will be using three different online tools for this class, you will need to s
 
 1.  [R and RStudio](https://www.datacamp.com/community/tutorials/installing-R-windows-mac-ubuntu): These software packages that implement the R statistical programming language are free and very popular tools for conducting statistical investigations, including all of the homeworks for this class.
     -   [Quarto](https://quarto.org/docs/computations/r.html): Quarto is a flexible document formatting standard that allows you to create nice looking documents that easily mix text and R code output (I made this website with Quarto - you can view the code [here](https://github.com/andrewmacd/dkustats101fall2024)). All your homeworks, midterm, and final projects will be written inside of Quarto documents. Instructions on how to use the Quarto syntax will be provided with the first homework assignment.
-2.  [DataCamp](): DataCamp has a lot of very useful tutorials that will help you learn how to code in R.
+2.  [DataCamp](https://www.datacamp.com/groups/shared_links/7c03318eb6f1df16e652aff60e739ebb3a341122415370bdcf81a6bdd7c55f66): DataCamp has a lot of very useful tutorials that will help you learn how to code in R.
 
 # Required texts
 
@@ -103,7 +103,7 @@ I will detail the policy for this course below. Basically, try to learn stuff, d
 
 -   Placement exams **1%**: A short quiz that you will take at both the start and end of class to measure how much pre-knowledge you have and how much knowledge you have gained during the course. Exams are pass/fail depending on if you complete them or not
  
--   Extra credit **maximum 3%**: You have several opportunities to earn extra credit. There will be three graph contests, whereby the student who is voted by the other students as having the best graph will receive extra credit points. 
+-   Extra credit **maximum 3%**: You have several opportunities to earn extra credit. There will be three graph contests, whereby the student who is voted by the other students as having the best graph will receive extra credit points. You can also earn some extra credit by replying to other students who post problems in the Discussion section of the Canvas website.
 
 ## Lateness policy
 
