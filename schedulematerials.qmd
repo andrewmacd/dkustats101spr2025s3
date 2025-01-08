@@ -32,14 +32,14 @@ Topics covered:
 
 -   Dealing with problem distributions (outliers, reexpression)
 
--   Lecture webpage: [Lecture 1.2]()
+-   Lecture webpage: [Lecture 1.2](https://andrewm.shinyapps.io/spring2025s3distributions/)
 
--   Lecture activity: [Lecture 1.2 activity]()
+-   Lecture activity: [Lecture 1.2 activity](activities/Lecture 1.2/Lecture 1.2 - Characteristics of Distributions Activity.html)
     -   Make sure to extract (unzip) the lab files before attempting to modify them!
 
 ## Lab 1.1: R and Quarto familiarization (Wednesday, January 8)
 
--   Lab files: [Lab 1.1](Lab 1.1 - Getting used to Quarto.html)
+-   Lab files: [Lab 1.1](labs/Lab 1.1/Lab 1.1 - Getting used to Quarto.html)
 
 ## Online lab 1.1 (due Sunday, January 12 at 11:59:00 pm)
 
