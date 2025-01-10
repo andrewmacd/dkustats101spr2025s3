@@ -1,0 +1,47 @@
+---
+title: "Unit 1 homework instructions"
+author: "Anonymous"
+date: "1/19/2025"
+output:
+  html_document:
+    toc: true
+subtitle: DKU Stats 101 Spring 2025 Session 3
+format: 
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+# Put any setup code here
+```
+
+![](art.jpg)
+
+## Introduction
+
+## Question 1: Describing your data (10 points)
+
+### 1a. Where is this data from?
+
+For this dataset, describe the data according to the five Ws & *how* defined in the textbook Chapter 1.2. What are some possible problems with the *who* and *what* of the dataset?
+
+### 1b. What are the variable types?
+
+For the following variables, please list the variable type as defined in the textbook Chapter 1.3:
+
+- `artist` 
+- `country` 
+- `yearOfBirth`
+- `name`
+- `year`
+- `ageOfPaiting`
+- `price`
+- `material`
+- `height`
+- `dominantColor`
+
+
+## Question 2: 
