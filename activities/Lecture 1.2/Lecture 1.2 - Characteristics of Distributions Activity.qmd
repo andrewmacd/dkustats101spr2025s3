@@ -18,9 +18,9 @@ format:
 
 First, we need to install a good-quality graphical display library:
 
-1.  If you have not installed the `ggplot2` package, you can do so by typing `install.packages("ggplot2")` into the Console at the bottom of your RStudio terminal. Answer `yes` when prompted.
+1.  If you have not installed the `tidyverse` package, you can do so by typing `install.packages("tidyverse")` into the Console at the bottom of your RStudio terminal. Answer `yes` when prompted.
 
-2.  Type `library(ggplot2)` into the Console after the installation has finished - this loads the package into memory
+2.  Type `library(tidyverse)` into the Console after the installation has finished - this loads the package into memory
 
 Second, we need to open a basic R Script page to help you run your code
 
