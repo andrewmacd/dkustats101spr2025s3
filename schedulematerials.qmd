@@ -64,7 +64,7 @@ Topics covered:
 
 ## Unit 1 homework (due Sunday, January 19 at 23:59:00 pm)
 
--   Homework files: [Unit 1 homework]
+-   Homework files: [Unit 1 homework](homeworks/Unit 1 homework/unit1homework.zip)
 -   Homework sample solutions: [Unit 1 homework sample solutions]
 
 # Unit 2: Relationships between variables
