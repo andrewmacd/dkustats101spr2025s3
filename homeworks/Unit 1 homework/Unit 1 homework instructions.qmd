@@ -20,6 +20,17 @@ format:
 
 ![](art.jpg)
 
+## Scoring guide
+
+- Getting the right answer is only a small part of the grade
+- Good quality interpretation of your results is the name of the game
+- If you see something that looks unusual in your data (outlier, some unusual distribution type) - investigate it! 
+- When explaining your results, say something interesting about them. Did it match your expectations? Why or why not? 
+- Brief explanations that simply repeat what I can visually see myself will not receive a good score
+- On the other hand, filling the homework with pages of not very interesting description is not valuable either. The goal isn't to write the most words, but find the most interesting things in the data.
+- You do not need to be an expert in art for a good score, but I will expect you to look up basic information, such as "what does art typically sell for?" and "what is a standard size for paintings"? and so on to help you understand and set expectations your data.
+- The information requested in the question prompts are only a starting point, if you find other interesting information along the way, please report that. You don't need to look at the data forever but if there is obviously something else interesting in the data you should report it.
+
 ## Introduction
 
 ## Question 1: Describing your data (10 points)
@@ -43,5 +54,30 @@ For the following variables, please list the variable type as defined in the tex
 - `height`
 - `dominantColor`
 
+## Question 2: Displaying and describing the data
 
-## Question 2: 
+For the moment, we are going to focus on paintings by Chinese artists. You can create a subset of your data using the `filter()` verb as you learned in the DataCamp lab. 
+
+### 2a. Using the `filter()` verb as described in the DataCamp lab, make a subset of your data that only includes art from Chinese artists. Show the code you used to make the subset using the #| echo: true code block option.
+
+### 2b. Using the Think-Show-Tell framework from the textbook (example on page 71), investigate the distribution of the height of the Chinese paintings
+
+> Think
+
+> Show
+
+> Tell
+
+### 2c. Using the Think-Show-Tell framework from the textbook, investigate the distribution of the width of the Chinese paintings
+
+> Think 
+
+> Show 
+
+> Tell
+
+### 2d. Consider the results of 2b. and 2c. together. What can we understand about Chinese art from viewing the distribution of these two variables?
+
+## Question 3: Relationships between categorical variables
+
+### 3a. 
