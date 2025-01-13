@@ -49,6 +49,8 @@ format:
 
 For this dataset, describe the data according to the five Ws & *how* defined in the textbook Chapter 1.2. What are some possible problems with the *who* and *what* of the dataset?
 
+The original dataset can be found [here](https://github.com/jasonshi10/art_auction_valuation).
+
 ### 1b. What are the variable types?
 
 For the following variables, please list the variable type as defined in the textbook Chapter 1.3:
