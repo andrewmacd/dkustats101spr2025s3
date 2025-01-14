@@ -1,6 +1,5 @@
 ---
 title: "Lecture 2.1 - Association and correlation"
-subtitle: "DKU Stats 101 Spring 2025"
 author: "Professor MacDonald"
 date: "1/15/2025"
 engine: knitr
