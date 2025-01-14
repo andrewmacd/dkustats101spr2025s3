@@ -87,7 +87,7 @@ Topics covered:
 
 ## Lab 2.1: Advanced Quarto editing (Wednesday, January 15)
 
--   Lab files: [Lab 1.2]
+-   Lab files: [Lab 2.1](labs/Lab 2.1/lab.2.1.zip)
     -   Make sure to extract (unzip) the lab files before attempting to modify them!
 
 ## Online lab 2.1 (due on Friday, January 17 at 23:59:00)
