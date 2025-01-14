@@ -6,7 +6,7 @@ project:
     - "!homeworks"
     - "!activities"
     - "!labs"
-    - "!lectures"
+    - "!old.lectures"
   
 name: "dku-stats-101-spr2025s3"
 
