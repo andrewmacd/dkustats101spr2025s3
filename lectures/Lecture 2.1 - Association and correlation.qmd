@@ -1,0 +1,22 @@
+---
+title: "Lecture 2.1 - Association and correlation"
+subtitle: "DKU Stats 101 Spring 2025"
+author: "Professor MacDonald"
+date: "8/29/2024"
+engine: knitr
+format: 
+  live-revealjs: 
+    output-file: lecture.2.1.html
+webr:
+  cell-options:
+    autorun: false
+  packages:
+    - tidyverse
+  resources:
+    - https://raw.githubusercontent.com/sta199-f24/sta199-f24.github.io/main/slides/data/birthdays.csv
+---
+
+{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+
+
+
