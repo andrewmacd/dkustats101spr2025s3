@@ -72,9 +72,9 @@ To prevent the code from being displayed after you render a document, you can us
 
 > Add `#| echo: false` to your sodium histogram code chunk and render the document. Verify that the code is now hidden.
 
-However, you will probably notice that both the setup code chunk and the sodium histogram are printing a bunch of other text that are either informational or warnings about various things. These texts may help you debug when your code is not working but should not be displayed on any of your submitted homework documents. To suppress the printing of warning, you can instead specify `#| warning: false`. Similarly, some functions will print some information about the function that you will want to hide when rendering the document. You can control this with `#| information: false`.
+However, you will probably notice that both the setup code chunk and the sodium histogram are printing a bunch of other text that are either informational or warnings about various things. These texts may help you debug when your code is not working but should not be displayed on any of your submitted homework documents. To suppress the printing of warning, you can instead specify `#| warning: false`. Similarly, some functions will print some information about the function that you will want to hide when rendering the document. You can control this with `#| message: false`.
 
-To prevent anything from the code chunk being printed, you can specify `#| include: false`. Note that this will prevent any results from the code from being printed also - this option is best used in the setup code chunk.
+To prevent anything from the code chunk being printed, you can specify `#| message: false`. Note that this will prevent any results from the code from being printed also - this option is best used in the setup code chunk.
 
 > Add `#| warning: false` and `#| information: false` to the sodium histogram code chunk and `#| include: false` to the setup code chunk. Render the document to verify that the nuisance text is no longer printing.
 
