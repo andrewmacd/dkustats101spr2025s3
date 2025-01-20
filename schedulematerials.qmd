@@ -110,7 +110,7 @@ Topics covered:
 
 -   Lecture webpage: [Lecture 2.2]
 
--   Lecture activity: [Lecture 2.2 activity]
+-   Lecture activity: [Lecture 2.2 activity](activities/Lecture 2.2/lecture.2.2.activity.zip)
 
 ## Lecture 2.3: Regression Wisdom (Wednesday, January 22)
 
