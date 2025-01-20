@@ -16,7 +16,7 @@ webr:
     - broom
     - gridExtra
   resources:
-    - https://raw.githubusercontent.com/andrewmacd/dkustats101spr2025s3/main/lectures/Data/hdi.2015.csv
+    - https://raw.githubusercontent.com/andrewmacd/dkustats101spr2025s3/main/lectures/Data/HDI.2015.csv
     - https://raw.githubusercontent.com/andrewmacd/dkustats101spr2025s3/main/lectures/Data/classroster.csv
 ---
 
@@ -84,7 +84,7 @@ hdi.model.tidy.log <- tidy(hdi.model.log)
 
 ## Line of best fit
 
-[](Images/Lecture 2.2/hdi.png)
+![HDI definition](Images/Lecture 2.2/hdi.png)
 
 How to describe the relationship between `GDP per capita` and `HDI score`?
 
@@ -414,11 +414,11 @@ ggplot(global.data.log, aes(x=log.gdp.capita, y=hdi.score)) +
 
 ### Outlier
 
-[Equatorial Guinea map](Images/Lecture 2.2/equatorial.guinea.map.jpg)
+![Equatorial Guinea map](Images/Lecture 2.2/equatorial.guinea.map.jpg)
 
-[President's son](Images/Lecture 2.2/son.jpg)
+![President's son](Images/Lecture 2.2/son.jpg)
 
-[President's son's cars](Images/Lecture 2.2/equatorial.guinea.cars.jpg)
+![President's son's cars](Images/Lecture 2.2/equatorial.guinea.cars.jpg)
 
 
 ### Graphing the residuals - log
