@@ -128,7 +128,7 @@ Topics covered:
 
 -   Lecture webpage: [Lecture 2.3]
 
--   Lecture activity: [Lecture 2.3 activity]
+-   Lecture activity: [Lecture 2.3 activity](activities/Lecture 2.3/lecture.2.3.activity.zip)
 
 ## Lab 2.1: Working with regressions using `dplyr` (Wednesday, January 22)
 
