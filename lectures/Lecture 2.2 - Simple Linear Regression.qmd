@@ -29,7 +29,7 @@ webr:
 
 theme_set(theme_classic())
 
-global.data <- read.csv("hdi.2015.csv")
+global.data <- read.csv("HDI.2015.csv")
 classroster <- read.csv("classroster.csv", fileEncoding="UTF-8-BOM")
 
 global.data.nooutlier <- global.data %>%
@@ -58,7 +58,7 @@ hdi.model.tidy.log <- tidy(hdi.model.log)
 library(tidyverse)
 library(broom)
 
-global.data <- read.csv("Data/hdi.2015.csv")
+global.data <- read.csv("Data/HDI.2015.csv")
 
 global.data.nooutlier <- global.data %>%
   filter(gdp.capita < 100000)
@@ -84,7 +84,7 @@ hdi.model.tidy.log <- tidy(hdi.model.log)
 
 ## Line of best fit
 
-[HDI definition]((Images/Lecture 2.2/hdi.png)
+[](Images/Lecture 2.2/hdi.png)
 
 How to describe the relationship between `GDP per capita` and `HDI score`?
 
@@ -414,11 +414,11 @@ ggplot(global.data.log, aes(x=log.gdp.capita, y=hdi.score)) +
 
 ### Outlier
 
-[Equatorial Guinea map]((Images/Lecture 2.2/equatorial.guinea.map.jpg)
+[Equatorial Guinea map](Images/Lecture 2.2/equatorial.guinea.map.jpg)
 
-[President's son]((Images/Lecture 2.2/son.jpg)
+[President's son](Images/Lecture 2.2/son.jpg)
 
-[President's son's cars]((Images/Lecture 2.2/equatorial.guinea.cars.jpg)
+[President's son's cars](Images/Lecture 2.2/equatorial.guinea.cars.jpg)
 
 
 ### Graphing the residuals - log
