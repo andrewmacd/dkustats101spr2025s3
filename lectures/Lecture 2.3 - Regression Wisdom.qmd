@@ -15,6 +15,7 @@ webr:
     - knitr
     - broom
     - gridExtra
+    - kableExtra
   resources:
     - https://raw.githubusercontent.com/andrewmacd/dkustats101spr2025s3/main/lectures/Data/auto.mpg.csv
     - https://raw.githubusercontent.com/andrewmacd/dkustats101spr2025s3/main/lectures/Data/classroster.csv
@@ -26,12 +27,6 @@ webr:
 #| label: setup
 #| include: false
 #| autorun: true
-
-library(tidyverse)
-library(knitr)
-library(gridExtra)
-library(broom)
-library(learnr)
 
 theme_set(theme_classic())
 set.seed(888888)
@@ -62,7 +57,6 @@ Many parts of these results we already know how to interpret. For now, we will f
 ```{webr}
 #| label: basicmodel
 #| caption: "Simple regression model"
-
 mod.dis <- lm(mpg ~ displacement, data=auto.mpg)
 summary(mod.dis)
 ```
@@ -72,7 +66,6 @@ summary(mod.dis)
 ```{webr}
 #| label: basicmodelresids
 #| caption: "Simple model residual distribution"
-
 auto.mpg.augment <- augment(mod.dis, auto.mpg)
 
 ggplot(auto.mpg.augment, aes(x=.resid)) +
@@ -85,7 +78,6 @@ How would you interpret this residual histogram?
 
 ```{webr}
 #| label: picker1
-
 sample(classroster$name, 1)
 ```
 
@@ -100,7 +92,6 @@ sample(classroster$name, 1)
 
 ```{webr}
 #| label: picker2
-
 sample(classroster$name, 1)
 ```
 
@@ -119,11 +110,11 @@ sample(classroster$name, 1)
 ```{webr}
 #| label: braindead
 #| caption: "Base model vs. predictor variable model"
-
 ggplot(auto.mpg, aes(x=displacement, y=mpg)) +
   geom_point() +
   geom_smooth(method="lm", se=FALSE) +
-  geom_hline(yintercept=mean(auto.mpg$mpg), color="red")
+  geom_hline(yintercept=mean(auto.mpg$mpg), color="red") +
+  labs(x="Displacement", y="MPG")
 ```
 
 ### When is $R^2$ "big enough"?
@@ -155,7 +146,6 @@ ggplot(auto.mpg, aes(x=displacement, y=mpg)) +
 ```{webr}
 #| label: mpgmodel
 #| caption: "MPG modeled with weight"
-
 summary(lm(data=auto.mpg, mpg ~ weight), digits=3)
 ```
 
@@ -176,7 +166,6 @@ Will our model do a good job predicting this car's miles per gallon?
 
 ```{webr}
 #| label: picker3
-
 sample(classroster$name, 1)
 ```
 
@@ -196,11 +185,11 @@ $\hat{y} = -4.17$ miles per gallon
 ```{webr}
 #| label: mpgmodelgraph
 #| caption: "MPG model picture"
-
 ggplot(auto.mpg, aes(x=weight, y=mpg)) +
   geom_point() +
   geom_point(aes(x=6581, y=-4.17), color="red") +
-  labs(x="Weight", y="Miles per gallon", title="Miles per gallon as a function of weight")
+  labs(x="Weight", y="Miles per gallon", title="Miles per gallon as a function of weight") + 
+  annotate(geom="text", x=6500, y=-2.5, label="Maybach", color="red")
 ```
 
 ## Outliers
@@ -212,16 +201,14 @@ First, we can create random data for both a variable called `height` and one cal
 ```{webr}
 #| label: basicwealthmodel
 #| caption: "Shoe and wealth definition"
-
 height <- rnorm(20, mean=178, sd=7.6)
-log.net.worth <- rnorm(20, mean=13.95, sd=12.2)
+log.net.worth <- rnorm(20, mean=13.95, sd=3)
 ht.nw <- data.frame(height, log.net.worth)
 ```
 
 ```{webr}
 #| label: basicshoemodelgraph
 #| caption: "Shoe and wealth graph"
-
 # Run the model
 base.mod <- lm(log.net.worth ~ height, data=ht.nw)
 
@@ -237,7 +224,7 @@ slope <- base.mod %>%
   tidy() %>% 
   pull(estimate)
 
-slope <- round(slope[2], 2)
+slope <- round(slope[2], 3)
 
 base.label <- paste("Slope is ", slope, ", r2 is ", r.sq) 
 
@@ -245,7 +232,7 @@ ggplot(ht.nw, aes(x=height, y=log.net.worth)) +
   geom_point() +
   geom_smooth(method="lm", se=FALSE) +
   labs(x="Height", y="Log net worth", title="Log net worth as a a function of height") +
-  annotate(geom="text", x=185, y=10, label=base.label, color="red")
+  annotate(geom="text", x=185, y=19, label=base.label, color="red")
 ```
 
 ### Adding Steve Ballmer
@@ -255,7 +242,6 @@ ggplot(ht.nw, aes(x=height, y=log.net.worth)) +
 ```{webr}
 #| label: ballmermodel
 #| caption: "Adding Steve Ballmer"
-
 height.sb <- c(height, 196)
 log.net.worth.sb <- c(log.net.worth, 25.3)
 ht.nw.sb <- data.frame(height.sb, log.net.worth.sb)
@@ -265,7 +251,6 @@ What will happen to the slope and $R^2$?
 
 ```{webr}
 #| label: picker4
-
 sample(classroster$name, 1)
 ```
 
@@ -274,7 +259,6 @@ sample(classroster$name, 1)
 ```{webr}
 #| label: ballmerplot
 #| caption: "Relationship with Steve Ballmer added"
-
 # Run the model
 sb.mod <- lm(log.net.worth.sb ~ height.sb, data=ht.nw.sb)
 
@@ -286,19 +270,21 @@ r.sq <- sb.mod %>%
 r.sq <- round(r.sq, 2)
 
 # Get the slope
-slope <- base.mod %>% 
+slope <- sb.mod %>% 
   tidy() %>% 
   pull(estimate)
 
-slope <- round(slope[2], 2)
+slope <- round(slope[2], 3)
 
 sb.label <- paste("Slope is ", slope, ", r2 is ", r.sq) 
 
 ggplot(ht.nw.sb, aes(x=height.sb, y=log.net.worth.sb)) +
   geom_point() +
+  geom_point(data=ht.nw.sb %>% filter(log.net.worth.sb > 25), color="red") +
   geom_smooth(method="lm", se=FALSE) +
-  labs(x="Log net worth", y="Height", title="Log net worth as a a function of height with Steve Ballmer") +
-  annotate(geom="text", x=185, y=10, label="Slope is 0.199, r2 is 0.192", color="red")
+  labs(x="Height", y="Log net worth", title="Log net worth as a a function of height with Steve Ballmer") +
+  annotate(geom="text", x=185, y=10, label=sb.label, color="red") + 
+  annotate(geom="text", x=193, y=24.5, label="Steve Ballmer", color="red")
 ```
 
 ### Adding Warren Buffet    
@@ -308,7 +294,6 @@ ggplot(ht.nw.sb, aes(x=height.sb, y=log.net.worth.sb)) +
 ```{webr}
 #| label: buffetmodel
 #| caption: "Adding Warren Buffet"
-
 height.wb <- c(height, 178)
 log.net.worth.wb <- c(log.net.worth, 25.7)
 ht.nw.wb <- data.frame(height.wb, log.net.worth.wb)
@@ -317,14 +302,32 @@ ht.nw.wb <- data.frame(height.wb, log.net.worth.wb)
 ```{webr}
 #| label: buffetplot
 #| caption: "Relationship with Warren Buffet added"
+# Run the model
+wb.mod <- lm(log.net.worth.wb ~ height.wb, data=ht.nw.wb)
 
+# Get the r squared
+r.sq <- wb.mod %>% 
+  glance() %>% 
+  pull(r.squared)
 
+r.sq <- round(r.sq, 2)
+
+# Get the slope
+slope <- wb.mod %>% 
+  tidy() %>% 
+  pull(estimate)
+
+slope <- round(slope[2], 3)
+
+wb.label <- paste("Slope is ", slope, ", r2 is ", r.sq) 
 
 ggplot(ht.nw.wb, aes(x=height.wb, y=log.net.worth.wb)) +
   geom_point() +
+  geom_point(data=ht.nw.wb %>% filter(log.net.worth.wb > 25), color="red") +
   geom_smooth(method="lm", se=FALSE) +
   labs(x="Log net worth", y="Height", title="Log net worth as a a function of height with Warren Buffet") +
-  annotate(geom="text", x=185, y=10, label="Slope is 0.044, r2 is 0.005", color="red")
+  annotate(geom="text", x=185, y=10, label=wb.label, color="red") + 
+  annotate(geom="text", x=178, y=25, label="Warren Buffet", color="red")
 ```
 
 ### Adding Aleksandar Vučić
@@ -334,7 +337,6 @@ ggplot(ht.nw.wb, aes(x=height.wb, y=log.net.worth.wb)) +
 ```{webr}
 #| label: vucicmodel
 #| caption: "Adding Aleksandar Vučić"
-
 height.av <- c(height, 198)
 log.net.worth.av <- c(log.net.worth, 14.0)
 ht.nw.av <- data.frame(height.av, log.net.worth.av)
@@ -343,12 +345,32 @@ ht.nw.av <- data.frame(height.av, log.net.worth.av)
 ```{webr}
 #| label: vucicplot
 #| caption: "Relationship with Aleksandar Vučić added"
+# Run the model
+av.mod <- lm(log.net.worth.av ~ height.av, data=ht.nw.av)
+
+# Get the r squared
+r.sq <- av.mod %>% 
+  glance() %>% 
+  pull(r.squared)
+
+r.sq <- round(r.sq, 2)
+
+# Get the slope
+slope <- av.mod %>% 
+  tidy() %>% 
+  pull(estimate)
+
+slope <- round(slope[2], 3)
+
+av.label <- paste("Slope is ", slope, ", r2 is ", r.sq) 
 
 ggplot(ht.nw.av, aes(x=height.av, y=log.net.worth.av)) +
   geom_point() +
+  geom_point(data=ht.nw.av %>% filter(height.av >= 198), color="red") +
   geom_smooth(method="lm", se=FALSE) +
   labs(x="Log net worth", y="Height", title="Log net worth as a a function of height with Aleksandar Vučić") +
-  annotate(geom="text", x=185, y=10, label="Slope is 0.014, r2 is 0.002", color="red")
+  annotate(geom="text", x=185, y=10, label=av.label, color="red") +
+  annotate(geom="text", x=195, y=14.3, label="Aleksandar Vučić", color="red")
 ```
 
 ### Leverage vs. influence
@@ -391,7 +413,6 @@ Horsepower vs. MPG
 ```{webr}
 #| label: mpgplot
 #| caption: "Horsepower vs. mpg relationship"
-
 ggplot(auto.mpg, aes(x=horsepower, y=mpg)) + 
   geom_point() +
   geom_smooth(method="lm", se=FALSE) +
@@ -412,7 +433,6 @@ ggplot(auto.mpg, aes(x=horsepower, y=mpg)) +
 
 ```{webr}
 #| label: picker5
-
 sample(classroster$name, 1)
 ```
 
@@ -429,11 +449,11 @@ sample(classroster$name, 1)
 ```{webr}
 #| label: mpgregsummary
 #| caption: "MPG model"
-
 lm(data=auto.mpg, mpg ~ horsepower) %>%
   tidy() %>%
   select(c(term, estimate)) %>%
-  kable(digits=3, col.names=c("Term", "Estimate"))
+  kbl(digits=3, col.names=c("Term", "Estimate")) %>% 
+  kable_styling()
 ```
 
 * For every one unit increase in horsepower, miles per gallon decreases by about -0.15 units
@@ -441,7 +461,6 @@ lm(data=auto.mpg, mpg ~ horsepower) %>%
 
 ```{webr}
 #| label: picker6
-
 sample(classroster$name, 1)
 ```
 
@@ -450,10 +469,10 @@ sample(classroster$name, 1)
 ```{webr}
 #| label: mpgmodunits
 #| caption: "Horsepower distribution information"
-
 auto.mpg %>%
   summarize(min = min(horsepower, na.rm=TRUE), q1 = quantile(horsepower, p=0.25, na.rm=TRUE), median=median(horsepower, na.rm=TRUE), q3 = quantile(horsepower, p=0.75, na.rm=TRUE), max(horsepower, na.rm=TRUE)) %>%
-  kable(col.names=c("Min", "Q1", "Median", "Q3", "Max"))
+  kbl(col.names=c("Min", "Q1", "Median", "Q3", "Max")) %>% 
+  kable_styling()
 ```
 
 ### Step 7: interpret the intercept
@@ -461,11 +480,11 @@ auto.mpg %>%
 ```{webr}
 #| label: mpgmodintercept
 #| caption: "MPG model summary"
-
 lm(data=auto.mpg, mpg ~ horsepower) %>%
   tidy() %>%
   select(c(term, estimate)) %>%
-  kable(digits=3, col.names=c("Term", "Estimate"))
+  kbl(digits=3, col.names=c("Term", "Estimate")) %>% 
+  kable_styling()
 ```
 
 ### Step 8: solve for reasonable predictor values
@@ -493,7 +512,6 @@ $\hat{y} = 20.03$
 ```{webr}
 #| label: mpgresids
 #| caption: "MPG model residuals"
-
 mod <- lm(data=auto.mpg, mpg ~ horsepower, na.action = na.exclude)
 auto.mpg.augment <- augment(mod, auto.mpg)
 
@@ -508,7 +526,6 @@ ggplot(auto.mpg.augment, aes(x=horsepower, y=.resid)) +
 ```{webr}
 #| label: mpgresidsdist
 #| caption: "MPG model residuals distribution"
-
 auto.mpg.augment <- augment(mod, auto.mpg)
 
 ggplot(auto.mpg.augment, aes(x=.resid)) +
@@ -521,7 +538,6 @@ ggplot(auto.mpg.augment, aes(x=.resid)) +
 ```{webr}
 #| label: mpgresidsse
 #| caption: "MPG model summary"
-
 summary(mod, digits=3)
 ```
 
@@ -530,7 +546,6 @@ summary(mod, digits=3)
 ```{webr}
 #| label: mpgrsquared
 #| caption: "MPG model r squared"
-
 summary(mod, digits=3)
 ```
 
@@ -542,7 +557,6 @@ summary(mod, digits=3)
 
 ```{webr}
 #| label: picker7
-
 sample(classroster$name, 1)
 ```
 

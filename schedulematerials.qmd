@@ -126,7 +126,7 @@ Topics covered:
 
 -   Straightening scatterplots
 
--   Lecture webpage: [Lecture 2.3]
+-   Lecture webpage: [Lecture 2.3](lectures/lecture.2.3.html)
 
 -   Lecture activity: [Lecture 2.3 activity](activities/Lecture 2.3/lecture.2.3.activity.zip)
 
