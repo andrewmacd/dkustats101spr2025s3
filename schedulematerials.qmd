@@ -58,9 +58,9 @@ Topics covered:
 
 -   Normal percentiles
 
--   Lecture webpage: [Lecture 1.3]
+-   Lecture webpage: [Lecture 1.3](https://andrewm.shinyapps.io/spring2025s3advanceddistributions/)
 
--   Lecture activity: [Lecture 1.3 activity]
+-   Lecture activity: [Lecture 1.3 activity](activities/Lecture 1.3/lecture.1.3.activity.zip)
 
 ## Unit 1 homework (due Sunday, January 19 at 23:59:00 pm)
 

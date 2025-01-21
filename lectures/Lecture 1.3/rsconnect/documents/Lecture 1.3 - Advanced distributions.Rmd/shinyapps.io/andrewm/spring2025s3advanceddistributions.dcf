@@ -1,0 +1,12 @@
+name: spring2025s3advanceddistributions
+title: spring2025s3advanceddistributions
+username: andrewm
+account: andrewm
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13703904
+bundleId: 9639642
+url: https://andrewm.shinyapps.io/spring2025s3advanceddistributions/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
