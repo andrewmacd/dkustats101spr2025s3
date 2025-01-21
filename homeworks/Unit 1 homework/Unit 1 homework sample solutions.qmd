@@ -1,0 +1,425 @@
+---
+title: "Unit 1 homework sample solutions"
+author: "Anonymous"
+date: "1/19/2025"
+output:
+  html_document:
+    toc: true
+subtitle: DKU Stats 101 Spring 2025 Session 3
+format: 
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+library(janitor)
+
+artdata <- read.csv("artdata.cleaned.csv")
+```
+
+![](art.jpg)
+
+
+## Introduction
+
+## Question 1: Describing your data (10 points)
+
+### 1a. Where is this data from?
+
+For this dataset, describe the data according to the five Ws & *how* defined in the textbook Chapter 1.2. What are some possible problems with the *who* and *what* of the dataset?
+
+The original dataset can be found [here](https://github.com/jasonshi10/art_auction_valuation).
+
+- Who
+- What 
+- When
+- Where
+- Why
+- How
+
+> Possible problems: 
+
+### 1b. What are the variable types?
+
+For the following variables, please list the variable type as defined in the textbook Chapter 1.3:
+
+- `artist`: identifier 
+- `country`: categorical 
+- `yearOfBirth`: either identifier or quantitative
+- `name`: identifier
+- `year`: either identifier or quantitative
+- `ageOfPaiting`: quantitative
+- `price`: quantitative
+- `material`: categorical
+- `height`: quantitative
+- `dominantColor`: categorical
+
+## Question 2: Displaying and describing the data (15 points)
+
+For the moment, we are going to focus on paintings by Chinese artists. You can create a subset of your data using the `filter()` verb as you learned in the DataCamp lab. 
+
+### 2a. Filtering your data
+
+Using the `filter()` verb as described in the DataCamp lab, make a subset of your data that only includes art from Chinese artists. Show the code you used to make the subset using the `#| echo: true` code block option.
+
+```{r}
+#| label: q2a
+#| echo: true
+
+artdata.chinese <- artdata %>% 
+  filter(country=="Chinese")
+
+artdata.wide <- artdata.chinese %>% 
+  filter(width>250)
+```
+
+
+### 2b. Investigating height
+
+Using the Think-Show-Tell framework from the textbook (example on page 71), investigate the distribution of the height of the Chinese paintings
+
+Note: for this question and all other Think sections in the homework, you do not need to report the W's of the data (you have already completed this in Q1)
+
+> Think
+
+> Show
+
+```{r}
+#| label: fig-q2b
+#| echo: false
+#| warning: false
+#| fig-cap: "Histogram of height of Chinese art"
+#| fig-subcap: 
+#|      - "Original"
+#|      - "Transformed"
+
+ggplot(artdata.chinese, aes(x=height)) +
+  geom_histogram(fill="blue", color="black", bins=15) + 
+  labs(x="Height in cm")
+
+ggplot(artdata.chinese, aes(x=log(height))) +
+  geom_histogram(fill="red", color="black", bins=15) +
+  labs(x="Log height in cm")
+```
+
+
+> Tell
+
+### 2c. Investigating width
+
+Using the Think-Show-Tell framework from the textbook, investigate the distribution of the width of the Chinese paintings
+
+> Think 
+
+> Show 
+
+```{r}
+#| label: fig-q2c
+#| echo: false
+#| warning: false
+#| fig-cap: "Histogram of height of Chinese art"
+#| fig-subcap: 
+#|      - "Original"
+#|      - "Transformed"
+
+ggplot(artdata.chinese, aes(x=width)) +
+  geom_histogram(fill="blue", color="black", bins=15) + 
+  labs(x="Width in cm")
+
+ggplot(artdata.chinese, aes(x=log(width))) +
+  geom_histogram(fill="red", color="black", bins=15) +
+  labs(x="Log width in cm")
+```
+
+> Tell
+
+### 2d. Thinking about your results
+
+Consider the results of 2b. and 2c. together. What can we understand about Chinese art from viewing the distribution of these two variables?
+
+> Answers will vary here, good quality effort to interpret investigation of this question is required.
+
+## Question 3: Relationships between categorical variables - American and Chinese artists and oil vs. ink. (15 points)
+
+### 3a. Recoding your data
+
+Using the `mutate()` verb and the `case_when()` verb combined with `grepl()`, create two new variables. The first is `material.type` and the second is `us.china`. The first variable should recode material to be either `Oil`, `Ink`, or `Other`, depending on whether the original values of `material` contained either the words `oil` or `ink`. The second variable should make a similar transformation to `country` where you recode the variable to be either `American`, `Chinese`, or `Other`. Show the code you used to make the new variables using the `#| echo:` true code block option.
+
+Hint 1: you can see some examples of `case_when()` and `grepl()` [here](https://dplyr.tidyverse.org/reference/case_when.html)and [here](https://rud.is/b/2017/03/10/making-a-case-for-case_when/) .
+
+Hint 2: make sure to use the `ignore.case=TRUE` option in `grepl()`
+
+```{r}
+#| label: q3a
+#| echo: true
+#| warning: false
+
+artdata.uschina <- artdata %>% 
+  mutate(material.s = case_when(grepl("oil", 
+                                      material, 
+                                      ignore.case = TRUE) ~ "Oil",
+                                grepl("ink", 
+                                      material, 
+                                      ignore.case = TRUE) ~ "Ink",
+                                TRUE ~ "Other"),
+         country.s = case_when(country == "American" ~ "American",
+                               country == "Chinese" ~ "Chinese",
+                               TRUE ~ "Other"))
+```
+
+
+### 3b. Investigating the categorical relationship between `us.china` and `material.type`
+
+Investigate the relationship between `us.china` and `material.type`
+
+Hint 3: you can see an example of some ways to display this information [here](http://analyticswithr.com/contingencytables.html)
+
+> Think 
+
+> Show 
+
+```{r}
+#| label: tbl-q3b
+#| echo: false
+#| tbl-cap: "Contingency table of origin vs. material"
+#| tbl-subcap: 
+#|    - "Count totals"
+#|    - "Percent totals"
+
+artdata.uschina.table <- artdata.uschina %>% 
+  mutate(`Material` = material.s,
+         `Country` = country.s)
+
+artdata.uschina.table %>% 
+  tabyl(`Material`, `Country`) %>%
+  adorn_totals(c("row", "col")) %>% 
+  adorn_title("combined") %>%
+  kbl() %>% 
+  kable_styling()
+
+artdata.uschina.table %>% 
+  tabyl(`Material`, `Country`) %>%
+  adorn_totals(c("row", "col")) %>%
+  adorn_percentages("col") %>% 
+  adorn_pct_formatting(rounding = "half up", digits = 0) %>%
+  adorn_title("combined") %>%
+  kbl() %>% 
+  kable_styling()
+```
+
+
+> Tell
+
+### 3c.Thinking about your results
+
+Think carefully about why you have observed this result and provide some additional information about what this investigation means for understanding this dataset and art in general.
+
+> Answers will vary here, good quality effort to interpret investigation of this question is required.
+
+## Question 4: Comparing groups (15 points)
+
+### 4a. Recoding your data
+
+Similar to the previous question, create a new variable called `famous.countries` that recodes country to be either `American`, `French`, `Italian` and `Spanish`. Mark art from all other countries as `NA` (the code that stands for missing or not available in R). Additionally, create a new variable called `area` that is a calculation of the area of the art (height times width). Show the code you used to make the new variables using the `#| echo:` true code block option. 
+
+```{r}
+#| label: q4a
+#| echo: true
+
+artdata.famous.c <- artdata %>% 
+  mutate(country.f = case_when(country=="American" ~ "American",
+                               country=="French" ~ "French",
+                               country=="Italian" ~ "Italian",
+                               country=="Spanish" ~ "Spanish",
+                               TRUE ~ NA)) %>% 
+  mutate(area = height*width) %>% 
+  filter(!is.na(country.f))
+```
+
+
+### 4b. Compare the groups of countries on the variable `price`
+
+> Think 
+
+> Show 
+
+```{r}
+#| label: q4b
+#| echo: false
+#| fig-cap: "Comparing distribution of price across select countries"
+#| fig-subcap: 
+#|     - "Original"
+#|     - "Transformed"
+
+ggplot(artdata.famous.c, aes(x=price, y=country.f)) +
+  geom_boxplot(fill="blue", color="black") +
+  labs(y="Country", x="Price in USD")
+
+ggplot(artdata.famous.c, aes(x=log(price), y=country.f)) +
+  geom_boxplot(fill="red", color="black") +
+  labs(y="Country", x="Log of price in USD")
+```
+
+> Tell
+
+### 4c. Compare the groups of countries on the variable `area`
+
+> Think 
+
+> Show 
+
+```{r}
+#| label: q4c1
+#| echo: false
+
+ggplot(artdata.famous.c, aes(x=area, y=country.f)) +
+  geom_boxplot(fill="blue", color="black") +
+  labs(y="Country", x="Area in sq cm")
+```
+
+```{r}
+#| label: q4c2
+#| echo: false
+#| tbl-cap: "Outiers for variable: area"
+
+artdata.famous.c %>% 
+  filter(area > 150000) %>% 
+  select(c(artist, country, name, height, width, area)) %>% 
+  kbl() %>% 
+  kable_styling()
+```
+
+
+```{r}
+#| label: q4c3
+#| echo: false
+#| fig-cap: "Comparing distribution of area across select countries"
+#| fig-subcap: 
+#|     - "Original"
+#|     - "Transformed"
+
+artdata.famous.c <- artdata.famous.c %>% 
+  filter(area < 200000)
+
+ggplot(artdata.famous.c, aes(x=area, y=country.f)) +
+  geom_boxplot(fill="blue", color="black") +
+  labs(y="Country", x="Area in sq cm")
+
+ggplot(artdata.famous.c, aes(x=log(area), y=country.f)) +
+  geom_boxplot(fill="red", color="black") +
+  labs(y="Country", x="Log of area in sq cm")
+```
+
+> Tell
+
+### 4d. Thinking about your results
+
+Consider the results of 4b. and 4c. together. What can we learn about the differences in art between the countries? What do you think causes these differences or similarities? How would you confirm your guess as to the cause of the differences/similarities?
+
+> Answers will vary here, good quality effort to interpret investigation of this question is required.
+
+## Question 5: Considering deviations (10 points)
+
+### 5a. Selecting your data
+
+Pick three years of paintings to investigate whether the brightness of paintings has changed over time. You are free to pick any three years but you should pick years that correspond to different periods in art history. State the three years and justify your selection.
+
+> Many possible options here, in this example I will use 1888, 1920, and 1950
+
+### 5b. Finding the average
+
+Calculate the average brightness for each of the three years. Show your code using the `#| echo:` true code block option. 
+
+```{r}
+#| label: q5b
+#| echo: true
+#| tbl-cap: "Average brightness by year"
+
+artdata %>% 
+  filter(year==1888 | year==1920 | year==1950) %>% 
+  group_by(year) %>% 
+  summarize(mean.brightness = mean(brightness, na.rm=TRUE)) %>% 
+  mutate(Year = as.character(year),
+         Brightness = round(mean.brightness, 2)) %>% 
+  select(Year, Brightness) %>% 
+  kbl %>% 
+  kable_styling()
+```
+
+
+### 5c. Normalizing the data
+
+Find how many $z$ units each of the averages for the years are away from the overall mean of brightness and interpret your results. 
+
+> Think 
+
+> Show 
+
+```{r}
+#| label: q5c
+#| tbl-cap: "Z score of the difference in brightness"
+#| echo: false
+
+# Calculate overall mean
+mean.b <- c("Mean overall", mean(artdata$brightness, na.rm=TRUE), "")
+sd.b <- c("SD overall", sd(artdata$brightness, na.rm=TRUE), "")
+
+# Calculate z scores
+z.table <- artdata %>% 
+  filter(year==1888 | year==1920 | year==1950) %>% 
+  group_by(year) %>% 
+  summarize(mean = mean(brightness),
+            z.score = ((mean(brightness) - 
+                         as.numeric(mean.b[2]))) / 
+              as.numeric(sd.b[2])) %>% 
+  mutate(year = as.character(year),
+         mean = as.character(round(mean, 2)),
+         z.score = as.character(round(z.score, 2)))
+
+# Convert overall mean and sd to rounded number
+mean.b[2] <- as.character(round(as.numeric(mean.b[2]), 2))
+sd.b[2] <- as.character(round(as.numeric(sd.b[2]), 2))
+
+# Add overall mean and sd to table
+z.table <- rbind(z.table, mean.b)
+z.table <- rbind(z.table, sd.b)
+
+z.table %>% 
+  kbl(col.names=c("Year", "Mean", "Z Score")) %>% 
+  kable_styling()
+```
+
+
+> Tell
+
+### 5d. Thinking about your results
+
+What are some of the implications of your findings with regard to the motivation of this question? What are some of the limitations of this analysis? What other kind of analysis would you like to do to answer this question?
+
+> Answers will vary here, good quality effort to interpret investigation of this question is required.
+
+## Question 6: Your own investigation (15 points)
+
+### 6a. Selecting your own question
+
+Similar to the previous questions, think of your own question that you would like to ask of the data. Use the Think-Show-Tell procedure to conduct your investigation. Think deeply about what your result means. 
+
+> Think 
+
+> Show 
+
+> Tell
+
+> Answers will vary here, good quality effort to interpret investigation of this question is required.
+
+### 6b. In summary
+
+Sum up everything that you have learned in this investigation. Do not simply repeat/rephrase your previous results but try to say something larger that synthesizes the results together to draw a more meaningful general conclusion.
+
+> Need to think deeply about what information this dataset provides for full points.

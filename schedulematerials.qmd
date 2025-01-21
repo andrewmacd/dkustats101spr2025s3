@@ -81,13 +81,13 @@ Topics covered:
 
 -   Does correlation imply causation?
 
--   Lecture webpage: [Lecture 2.1]
+-   Lecture webpage: [Lecture 2.1](lectures/lecture.2.1.html)
 
--   Lecture activity: [Lecture 2.1 activity]
+-   Lecture activity: [Lecture 2.1 activity](activities/Lecture 2.1/lecture.2.1.activity.zip)
 
 ## Lab 2.1: Advanced Quarto editing (Wednesday, January 15)
 
--   Lab files: [Lab 1.2]
+-   Lab files: [Lab 2.1](labs/Lab 2.1/lab.2.1.zip)
     -   Make sure to extract (unzip) the lab files before attempting to modify them!
 
 ## Online lab 2.1 (due on Friday, January 17 at 23:59:00)
@@ -108,9 +108,9 @@ Topics covered:
 
 -   Regression assumptions
 
--   Lecture webpage: [Lecture 2.2]
+-   Lecture webpage: [Lecture 2.2](lectures/lecture.2.2.html)
 
--   Lecture activity: [Lecture 2.2 activity]
+-   Lecture activity: [Lecture 2.2 activity](activities/Lecture 2.2/lecture.2.2.activity.zip)
 
 ## Lecture 2.3: Regression Wisdom (Wednesday, January 22)
 
@@ -126,9 +126,9 @@ Topics covered:
 
 -   Straightening scatterplots
 
--   Lecture webpage: [Lecture 2.3]
+-   Lecture webpage: [Lecture 2.3](lectures/lecture.2.3.html)
 
--   Lecture activity: [Lecture 2.3 activity]
+-   Lecture activity: [Lecture 2.3 activity](activities/Lecture 2.3/lecture.2.3.activity.zip)
 
 ## Lab 2.1: Working with regressions using `dplyr` (Wednesday, January 22)
 
