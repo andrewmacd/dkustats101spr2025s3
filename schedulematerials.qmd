@@ -151,9 +151,9 @@ Topics covered:
 
 -   Indicator variables
 
--   Lecture webpage: [Lecture 2.4]
+-   Lecture webpage: [Lecture 2.4](lectures/lecture.2.4.html)
 
--   Lecture activity: [Lecture 2.4 activity]
+-   Lecture activity: [Lecture 2.4 activity](activities/Lecture 2.4/lecture.2.4.activity.zip)
 
 ## Online lab 2.2 (due on Friday, January 24 at 23:59:00)
 
