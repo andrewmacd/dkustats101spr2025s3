@@ -9,7 +9,7 @@ title: "Homework"
 
 # Unit 2 homework (due Tuesday, February 4 at 23:59:00) 
 
-  - [Unit 2 homework]
+  - [Unit 2 homework](homeworks/Unit 2 homework/unit2homework.zip)
   - [Unit 2 homework sample solutions]
 
 # Unit 3 exam (Wednesday, February 19 from 2:45 to 4:00 pm) 
