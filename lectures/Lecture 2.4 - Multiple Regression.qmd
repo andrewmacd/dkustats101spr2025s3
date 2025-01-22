@@ -50,7 +50,7 @@ kc.housing.aug <- augment(mod, kc.housing)
 * Indicator variables
 * Interaction terms
 
-![Seattle housing^Credit to: https://crosscut.com/opinion/2020/11/washington-state-housing-question-and-answer](Images/Lecture 2.4/seattlehousing.jpg)
+![Seattle housing^[Credit to: https://crosscut.com/opinion/2020/11/washington-state-housing-question-and-answer]](Images/Lecture 2.4/seattlehousing.png)
 
 ## Basic multiple regression interpretation
 
