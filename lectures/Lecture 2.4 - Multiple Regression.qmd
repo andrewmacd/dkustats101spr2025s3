@@ -29,7 +29,6 @@ webr:
 #| label: setup
 #| autorun: true
 #| include: false
-
 theme_set(theme_classic())
 set.seed(20200915)
 
@@ -59,7 +58,6 @@ kc.housing.aug <- augment(mod, kc.housing)
 ```{webr}
 #| label: livingpricemod
 #| caption: "Price model with sqft"
-
 summary(lm(data=kc.housing, sale_price ~ sqft), digits=3)
 ```
 
@@ -90,7 +88,6 @@ summary(lm(data=kc.housing, sale_price ~ sqft), digits=3)
 ```{webr}
 #| label: gradepricemod
 #| caption: "Price model with grade"
-
 summary(lm(data=kc.housing, sale_price ~ grade), digits=3)
 ```
 
@@ -98,7 +95,6 @@ What do you think will happen to the coefficient on `grade` when we add `sqft`?
 
 ```{webr}
 #| label: picker1
-
 sample(classroster$name, 1)
 ```
 
@@ -107,7 +103,6 @@ sample(classroster$name, 1)
 ```{webr}
 #| label: combinedmod
 #| caption: "Price model with two predictors"
-
 summary(lm(data=kc.housing, sale_price ~ sqft + grade), digits=3)
 ```
 
@@ -124,7 +119,6 @@ How would you interpret this model and the diagnostic statistics?
 
 ```{webr}
 #| label: picker2
-
 sample(classroster$name, 1)
 ```
 
@@ -133,7 +127,6 @@ sample(classroster$name, 1)
 ```{webr}
 #| label: livingvsgrade
 #| caption: "Graph of sqft vs. grade"
-
 ggplot(kc.housing, aes(x=grade, y=sqft)) +
   geom_jitter() + 
   geom_smooth(method="lm", se=FALSE) +
@@ -202,7 +195,6 @@ ggplot(kc.housing, aes(x=grade, y=sqft)) +
 ```{webr}
 #| label: straightenoughcheck
 #| caption: "Straight enough?"
-
 livingsp <- ggplot(kc.housing, aes(x=sqft, y=sale_price)) + 
   geom_point() +
   geom_smooth(method="lm", se=FALSE) +
@@ -234,7 +226,6 @@ grid.arrange(livingsp, grade)
 ```{webr}
 #| label: residdistcheck
 #| caption: "Residual distribution check"
-
 mod <- lm(data=kc.housing, sale_price ~ sqft + grade)
 kc.housing.aug <- augment(mod, kc.housing)
 
@@ -257,7 +248,6 @@ ggplot(kc.housing.aug, aes(x=.fitted)) +
 ```{webr}
 #| label: residpatterncheck
 #| caption: "Residual pattern check"
-
 ggplot(kc.housing.aug, aes(x=.fitted, y=.resid)) + 
   geom_point() + 
   geom_hline(yintercept=0, color="red") +
@@ -300,7 +290,6 @@ One of the best ways to check the linearity condition is with a partial residual
 ```{webr}
 #| label: partialresidcheck
 #| caption: "Partial residual plot check"
-
 eff1 <- visreg(mod, "sqft", gg=TRUE) +
   labs(x="Sqft living space",  y="Price") +
   scale_x_continuous(labels = scales::comma) + 
@@ -342,7 +331,6 @@ regression
 ```{webr}
 #| label: wagesmod
 #| caption: "Wages model"
-
 summary(lm(data=wages, wage ~ exp + factor(union)), digits=3)
 ```
 
@@ -351,7 +339,6 @@ summary(lm(data=wages, wage ~ exp + factor(union)), digits=3)
 ```{webr}
 #| label: wagesplot
 #| caption: "Wages model plot"
-
 ggplot(wages, aes(x=exp, y=wage)) +
   geom_point(aes(color=factor(union))) +
   geom_abline(slope=8.2430, intercept=747.5634, color="#F8766D") +
@@ -366,7 +353,6 @@ ggplot(wages, aes(x=exp, y=wage)) +
 ```{webr}
 #| label: predictedwages
 #| caption: "Predicted wages table"
-
 exp.table <- c("Experience", "5", "10", "15", "20")
 in.union <- c("In union", " ", " ", " ", " ")
 not.union <- c("Not in union", " ", " ", " ", " ")
@@ -383,7 +369,6 @@ kable(df, row.names=FALSE) %>%
 
 ```{webr}
 #| label: picker3
-
 sample(classroster$name, 1)
 ```
 
@@ -410,7 +395,6 @@ sample(classroster$name, 1)
 ```{webr}
 #| label: wagesinteractmodel
 #| caption: "Wages model with interaction"
-
 summary(lm(data=wages, wage ~ exp + factor(union) + factor(union) * exp, digits=3))
 ```
 
@@ -419,7 +403,6 @@ summary(lm(data=wages, wage ~ exp + factor(union) + factor(union) * exp, digits=
 ```{webr}
 #| label: wagesinteractplot
 #| caption: "Wages model plot with interaction"
-
 ggplot(wages, aes(x=exp, y=wage, color=factor(union))) +
   geom_point() +
   geom_smooth(method="lm", se=FALSE) +
@@ -433,7 +416,6 @@ ggplot(wages, aes(x=exp, y=wage, color=factor(union))) +
 ```{webr}
 #| label: predictedwagesinteract
 #| caption: "Predicted wages table with interaction"
-
 exp.table <- c("Experience", "5", "10", "15", "20")
 in.union <- c("In union", " ", " ", " ", " ")
 not.union <- c("Not in union", " ", " ", " ", " ")
@@ -450,7 +432,5 @@ kable(df, row.names=FALSE) %>%
 
 ```{webr}
 #| label: picker4
-
-
 sample(classroster$name, 1)
 ```
