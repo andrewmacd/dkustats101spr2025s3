@@ -103,7 +103,7 @@ Consider the results of 2a. and 2b. together. What can we understand about avera
 
 ## Question 3: Simple regression (20 points)
 
-### 3a. Investigating price vs. area
+### 3a. Investigating price vs. management fee
 
 Using the Think-Show-Tell framework from the textbook, please examine how the management fee of an apartment is related to the price of the apartment.
 
