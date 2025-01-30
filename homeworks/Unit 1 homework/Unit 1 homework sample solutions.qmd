@@ -51,7 +51,7 @@ For the following variables, please list the variable type as defined in the tex
 
 - `artist`: identifier 
 - `country`: categorical 
-- `yearOfBirth`: either identifier or quantitative
+- `yearOfBirth`: either identifier, quantitative, or categorical
 - `name`: identifier
 - `year`: either identifier or quantitative
 - `ageOfPaiting`: quantitative
