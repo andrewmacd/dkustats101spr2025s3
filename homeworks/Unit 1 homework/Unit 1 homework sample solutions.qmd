@@ -261,6 +261,12 @@ Hint 3: you can see an example of some ways to display this information [here](h
 
 > Think 
 
+1. I want to know if there is an association between country (US and China) and material type used in art produced by artists from these countries.
+2. The variable `us.china` records if the artist was from the US or China and `material.type` specifies the specific material used in the artwork.
+3. Since the variables are both categorical, we can use a contingency table to investigate their joint distribution.
+
+Categorical variable check: the country of birth does not overlap (an artwork cannot be listed as from multiple countries) and the material type also does not overlap (only one material type is listed per painting). This categorical variable restriction is a limitation of the data; in reality, the artwork may actually have overlapping values.
+
 > Show 
 
 ```{r}
@@ -269,7 +275,7 @@ Hint 3: you can see an example of some ways to display this information [here](h
 #| tbl-cap: "Contingency table of origin vs. material"
 #| tbl-subcap: 
 #|    - "Count totals"
-#|    - "Percent totals"
+#|    - "Percent totals by column"
 
 artdata.uschina.table <- artdata.uschina %>% 
   mutate(`Material` = material.s,
@@ -292,8 +298,11 @@ artdata.uschina.table %>%
   kable_styling()
 ```
 
+There are many more American artworks in the database than the Chinese, however, on a percent basis, most of the Chinese art is ink (67%) while American art is about equally split between ink (17%) and oil (19%), with the remainder of the art being of other types.
 
 > Tell
+
+Chinese artwork sold on the international art auction market is primarily ink, with only a small percentage sold in other category. By contrast, American art is primarily other categories, with equal amounts sold of ink and oil paintings. Chinese art sold is heavily ink-based whereas American art appears to be of diverse types.
 
 ### 3c.Thinking about your results
 
@@ -326,6 +335,10 @@ artdata.famous.c <- artdata %>%
 
 > Think 
 
+1. I want to know if there is variation in the variable price according to country of artist's origin.
+2. The dataset contains the auction price of each artwork in dollars.
+3. The variable price is continuous while the artist's country of origin is categorical. Therefore, side by side boxplots are appropriate to examine this question.
+
 > Show 
 
 ```{r}
@@ -345,21 +358,32 @@ ggplot(artdata.famous.c, aes(x=log(price), y=country.f)) +
   labs(y="Country", x="Log of price in USD")
 ```
 
+As can be seen in the first plot, the data is highly skewed and it is impossible to view the different distributions of price because of the data skew. Therefore, the data is reexpressed in log form in the second plot.
+
 > Tell
+
+In the log-transformed plot, the price differences become more clear. American artworks sells for the most, and Italian and French artwork sells for the least. In terms of variability, the Spanish art prices have the least variation while the other three countries appear to have roughly similar levels of variation among art prices. 
+
+However, all countries have significant outliers on the high side. It seems that regardless of country, there are a few artworks that sell for a lot of money while most artwork sells for a much smaller sum of money.
 
 ### 4c. Compare the groups of countries on the variable `area`
 
 > Think 
+
+1. I want to know if there is variation in the variable area according to country of artist's origin.
+2. The dataset contains the height and width of paintings in inches. Using this information we can calculate the area of the artwork.
+3. The variable area is continuous while the artist's country of origin is categorical. Therefore, side by side boxplots are appropriate to examine this question.
 
 > Show 
 
 ```{r}
 #| label: q4c1
 #| echo: false
+#| warning: false
 
 ggplot(artdata.famous.c, aes(x=area, y=country.f)) +
   geom_boxplot(fill="blue", color="black") +
-  labs(y="Country", x="Area in sq cm")
+  labs(y="Country", x="Area in sq in")
 ```
 
 ```{r}
@@ -388,14 +412,20 @@ artdata.famous.c <- artdata.famous.c %>%
 
 ggplot(artdata.famous.c, aes(x=area, y=country.f)) +
   geom_boxplot(fill="blue", color="black") +
-  labs(y="Country", x="Area in sq cm")
+  labs(y="Country", x="Area in sq in")
 
 ggplot(artdata.famous.c, aes(x=log(area), y=country.f)) +
   geom_boxplot(fill="red", color="black") +
-  labs(y="Country", x="Log of area in sq cm")
+  labs(y="Country", x="Log of area in sq in")
 ```
 
+In the first plot, there appears to be a very significant outlier. According to the outlier table, it is a work by Andy Warhol. After doing some online research, this appears to be a mistake value - the actual artwork is rougly normal artwork size. There are a few other high values of artwork that have a similar problem. Because these are mistake values, they are removed from this analysis. 
+
+However, even after removing the mistake values, the data is still highly skewed. Therefore, the data is then log-transformed to view the differences in the distributions more clearly.
+
 > Tell
+
+In the log-transformed plot, the American art is clearly the largest, with French and Italian art being roughly the same sized, on average, while Spanish art has the smallest area. All four countries appear to have roughly similar levels of variance in the artwork size. There are some outliers in both directions, it may be worth investigating in further detail what the characteristics of the large and small art are (are they some sort of special types of art that should be treated separately or not.)
 
 ### 4d. Thinking about your results
 
@@ -431,12 +461,15 @@ artdata %>%
   kable_styling()
 ```
 
-
 ### 5c. Normalizing the data
 
 Find how many $z$ units each of the averages for the years are away from the overall mean of brightness and interpret your results. 
 
 > Think 
+
+1. I want to know how far away from the mean of brightness each of the years are in standardized units ($z$-scores)
+2. I have the mean and standard deviation for brightness
+3. Brightness is a quantitative variable but has no obvious units
 
 > Show 
 
@@ -474,8 +507,11 @@ z.table %>%
   kable_styling()
 ```
 
+To construct the $z$-score, we subtract the mean from the observed value and divide it by the standard deviation, `r sd.b`.
 
 > Tell
+
+There is some difference in the years between the observed average brightness for the year and the standard deviation overall, but the difference, as we can see from the $z$-scores, is not large - at most a few tenths of a standard deviation. The years selected are all fairly close to the mean.
 
 ### 5d. Thinking about your results
 
