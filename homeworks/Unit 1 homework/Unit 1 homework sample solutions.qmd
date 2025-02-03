@@ -36,20 +36,22 @@ For this dataset, describe the data according to the five Ws & *how* defined in 
 
 The original dataset can be found [here](https://github.com/jasonshi10/art_auction_valuation).
 
-- Who
-- What 
-- When
-- Where
-- Why
-- How
+- `Who`: paintings that have been auctioned
+- `What`: price of paintings sold, other physical characteristics of the paintings
+- `When`: scraped from a website in 2018, years sold vary
+- `Where`: various art auction houses
+- `Why`: to analyze the features of a painting that predict the price
+- `How`: scraped by github user ahmedhosny and cleaned up by github user jasonshi10, data scraped from website artsalesindex
 
 > Possible problems: 
+
+It is not clear from the github documentation which cases were scraped, there could be some selection bias in both what was scraped (maybe only some types of cases were scraped) and in the selection of art houses the art website monitors. For the `what`, it also is not clear how some of the features of the paintings were calculated in the rows - presumably it was done by some type of machine learning algorithm.  
 
 ### 1b. What are the variable types?
 
 For the following variables, please list the variable type as defined in the textbook Chapter 1.3:
 
-- `artist`: identifier 
+- `artist`: either identifier or categorical
 - `country`: categorical 
 - `yearOfBirth`: either identifier, quantitative, or categorical
 - `name`: identifier
@@ -74,9 +76,6 @@ Using the `filter()` verb as described in the DataCamp lab, make a subset of you
 
 artdata.chinese <- artdata %>% 
   filter(country=="Chinese")
-
-artdata.wide <- artdata.chinese %>% 
-  filter(width>250)
 ```
 
 
@@ -87,6 +86,10 @@ Using the Think-Show-Tell framework from the textbook (example on page 71), inve
 Note: for this question and all other Think sections in the homework, you do not need to report the W's of the data (you have already completed this in Q1)
 
 > Think
+
+1. I want to summarize the distribution of heights of Chinese paintings
+2. The data are height measurements of paintings from China contained in the dataset. The units are inches.
+3. Since we are reviewing the distribution of one quantitative variable, a histogram is the most appropriate display.
 
 > Show
 
@@ -101,21 +104,61 @@ Note: for this question and all other Think sections in the homework, you do not
 
 ggplot(artdata.chinese, aes(x=height)) +
   geom_histogram(fill="blue", color="black", bins=15) + 
-  labs(x="Height in cm")
+  labs(x="Height in in.")
 
 ggplot(artdata.chinese, aes(x=log(height))) +
   geom_histogram(fill="red", color="black", bins=15) +
-  labs(x="Log height in cm")
+  labs(x="Log height in in.")
+```
+
+```{r}
+#| label: tbl-q2ba
+#| echo: false
+#| tbl-cap: "Relevant statistics of variable: height"
+
+height.fivenum <- fivenum(artdata.chinese$height)
+height.sumdata <- append(height.fivenum, length(!is.na(artdata.chinese$height)), after=0)
+height.sumdata <- append(height.sumdata, sd(artdata.chinese$height, na.rm=TRUE), after=1)
+height.sumdata <- append(height.sumdata, mean(artdata.chinese$height, na.rm=TRUE), after=2)
+
+names<-c("Count", "Std Dev", "Mean", "Min", "25%", "Median", "75%", "Max")
+
+height.sumdata.table <- data.frame(names, height.sumdata)
+
+kbl(height.sumdata.table, col.names = c("Statistic", "Value"), digits=2) %>% 
+  kable_styling()
+```
+
+```{r}
+#| label: tbl-q2bb
+#| echo: false
+#| tbl-cap: "Possible outliers of the variable: height (inches > 130)"
+
+artdata.chinese %>% 
+  filter(height > 130) %>% 
+  select(c(artist, name, year, height)) %>% 
+  kbl(col.names = c("Artist", "Name", "Year", "Height")) %>% 
+  kable_styling()
 ```
 
 
+The data appears to be right skewed. There appears to be a handful of suspicious outliers, but, on investigation, the values for height of each of these works appear geniune and therefore is no strong reason to exclude them. 
+
 > Tell
+
+After log transforming the data, the outliers no longer appear to be so serious. For the untransformed data, the mean and median are relatively close, though the mean is a little higher, likely due to the skew. The data is unimodal, right skewed, with a mean of `r round(mean(artdata.chinese$height, na.rm=TRUE), 2)`. Based on the data, we can expect that the height of each Chinese artwork will vary from the mean by an average of about `r round(sd(artdata.chinese$height, na.rm=TRUE), 2)` (the standard deviation). 
+
+In more meaningful terms, the average artwork size height is about the size of three sheets of paper stacked on top of each other, which seems about normal considering how art paintings are usually produced. There is some variation, the standard deviation indicates that the size may vary by up to two sheets of paper worth of height, on average. The IQR is even larger, indicating a wide range of heights in the data. The outliers are more modern pieces of art that may be some type of more experimental art.
 
 ### 2c. Investigating width
 
 Using the Think-Show-Tell framework from the textbook, investigate the distribution of the width of the Chinese paintings
 
 > Think 
+
+1. I want to summarize the distribution of the width of Chinese paintings
+2. The data are width measurements of paintings from China contained in the dataset. The units are inches.
+3. Since we are reviewing the distribution of one quantitative variable, a histogram is the most appropriate display.
 
 > Show 
 
@@ -130,14 +173,50 @@ Using the Think-Show-Tell framework from the textbook, investigate the distribut
 
 ggplot(artdata.chinese, aes(x=width)) +
   geom_histogram(fill="blue", color="black", bins=15) + 
-  labs(x="Width in cm")
+  labs(x="Width in in")
 
 ggplot(artdata.chinese, aes(x=log(width))) +
   geom_histogram(fill="red", color="black", bins=15) +
-  labs(x="Log width in cm")
+  labs(x="Log width in in")
 ```
 
+```{r}
+#| label: tbl-q2ca
+#| echo: false
+#| tbl-cap: "Relevant statistics of variable: width"
+
+width.fivenum <- fivenum(artdata.chinese$width)
+width.sumdata <- append(width.fivenum, length(!is.na(artdata.chinese$width)), after=0)
+width.sumdata <- append(width.sumdata, sd(artdata.chinese$width, na.rm=TRUE), after=1)
+width.sumdata <- append(width.sumdata, mean(artdata.chinese$width, na.rm=TRUE), after=2)
+
+names<-c("Count", "Std Dev", "Mean", "Min", "25%", "Median", "75%", "Max")
+
+width.sumdata.table <- data.frame(names, width.sumdata)
+
+kbl(width.sumdata.table, col.names = c("Statistic", "Value"), digits=2) %>% 
+  kable_styling()
+```
+
+```{r}
+#| label: tbl-q2cb
+#| echo: false
+#| tbl-cap: "Possible outliers of the variable: width (inches > 200)"
+
+artdata.chinese %>% 
+  filter(width > 200) %>% 
+  select(c(artist, name, year, width)) %>% 
+  kbl(col.names = c("Artist", "Name", "Year", "Width")) %>% 
+  kable_styling()
+```
+
+The data for width is also very right skewed with a handful of very distant outliers. One of the outliers was also an outlier in the height investigation (indicating a very large painting) and the other is a very long ink scroll. Both appear to be genuine measurements.
+
 > Tell
+
+A log transformation makes the distribution nearly perfectly symmetric, indicating that the data-generating process is probably logrithmic. In untransformed terms, the distribution is right skewed and unimodal, with a mean of `r round(mean(artdata.chinese$width, na.rm=TRUE), 2)`. Based on the data, we can expect that the width of each Chinese artwork will vary from the mean by an average of `r round(sd(artdata.chinese$width, na.rm=TRUE), 2)`.
+
+In this case, the average width is a little smaller than the average height, at about 2.5 sheets of paper wide, on average. The standard deviation is actually nearly the same as the mean, in part due to the extreme outliers, but even the IQR is about 20 inches, indicating that there is significant variability in width, though less so compared to height. The large outlier indicates that some paintings may be primarily horizontally oriented and others primarily vertically oriented, which may account for the large amount of variation.
 
 ### 2d. Thinking about your results
 
@@ -330,7 +409,7 @@ Consider the results of 4b. and 4c. together. What can we learn about the differ
 
 Pick three years of paintings to investigate whether the brightness of paintings has changed over time. You are free to pick any three years but you should pick years that correspond to different periods in art history. State the three years and justify your selection.
 
-> Many possible options here, in this example I will use 1888, 1920, and 1950
+> Many possible options here, in this example I will use 1888, 1920, and 1950. Need some justification for the year choice.
 
 ### 5b. Finding the average
 
