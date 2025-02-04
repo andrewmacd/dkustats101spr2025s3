@@ -185,7 +185,7 @@ Topics covered:
 
 -   Interpreting a confidence interval
 
--   Lecture webpage: [Lecture 3.1]
+-   Lecture webpage: [Lecture 3.1](lectures/lecture.3.1.html)
 
 -   Lecture activity: [Lecture 3.1 activity]
 

@@ -168,69 +168,6 @@
     "text": "Relationship reexpressed?\nOne final issue to consider is if this relationship should be reexpressed - made more linear.\n\n\n\n\n\n\n\n\n\nSeems clearer\n\n\nYour turn\nWith your partner, develop some expectations about some of the variables in the kc.houses dataset might be related.\nVariables:\n\n\n\n\n\n\n\n\nWhat to do with your partner:\n\nWrite down an interesting question we think we might be able to answer by examining a relationship in this dataset\nChoose the variables that you think might be able to answer this question\nWrite down what you expect the relationship to be between these two variables based on any prior knowledge\nDecide which variable is the response variable and which is the predictor variable\nMake a scatterplot using one of the codeblocks in the previous section and identify the features of the association"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Course Introduction",
-    "section": "",
-    "text": "Monday/Wednesday class at 12:00 pm to 2:30 pm in IB2071 (except February 12 - IB 2020)\nWednesday lab 2:45 pm to 4:00 pm in IB2071\nOffice hours -\n\nTuesday 10:00 am to 12:00 pm in WDR 3114\nTuesday 1:30 pm to 3:30 pm in WDR 3114\n\nHomeworks are all due at 11:59 pm\nAll other announcements and information are posted on the class Canvas site"
-  },
-  {
-    "objectID": "index.html#assessment",
-    "href": "index.html#assessment",
-    "title": "Course Introduction",
-    "section": "Assessment",
-    "text": "Assessment\n\nBeginning of class warmup quiz 10%: At the start of each class session there will be a series of short online questions to start discussion of the class material. I will drop your two lowest quiz grades. I will also curve the grade such that the student with the highest overall quiz grade will receive 100% and all other students will receive a corresponding boost to their grade.\nHomework 60%: At the end of the first two groups of content, a homework will be assigned that will ask you to analyze a dataset and answer questions related to that concept group. These homeworks are due at the noted date at 11:59 pm China time. Each homework will also have a best graph contest, where the person whose classmates vote as having the best graph wins some extra credit points.\n\nHomework 1: 15%\nHomework 2: 20%\nFinal project: 25%\n\nHomework checks 3%: To make sure you are making good progress on your homework, the Sunday before the homework is due (except for the first homework) you will be required to submit your progress on the homework so far. You are required to have tried to have answered all the questions covered by the lectures and textbook up to the specified cutoff. I will not check your answers but rather check to see if you have made a good effort to answer all the questions derived from the material already covered. If you have a reasonable answer for each question checked you will get full points. If you have not made an effort to answer all the questions reviewed you will get a zero.\nUnit 3 exam 20%: Unit 3 comprehension is better checked through an in-class exam. The exam will be open notes but closed book and will take place during the normal lab session that week.\nData Camp labs 5%: A number of labs on the website Data Camp will be assigned to you; these labs are pass/fail and you will receive full credit if you complete each of the labs by the specified due date.\nSyllabus quiz 1%: A short quiz after the first class regarding the course requirements.\nPlacement exams 1%: A short quiz that you will take at both the start and end of class to measure how much pre-knowledge you have and how much knowledge you have gained during the course. Exams are pass/fail depending on if you complete them or not\nExtra credit maximum 3%: You have several opportunities to earn extra credit. There will be three graph contests, whereby the student who is voted by the other students as having the best graph will receive extra credit points. You can also earn some extra credit by replying to other students who post problems in the Discussion section of the Canvas website."
-  },
-  {
-    "objectID": "index.html#lateness-policy",
-    "href": "index.html#lateness-policy",
-    "title": "Course Introduction",
-    "section": "Lateness policy",
-    "text": "Lateness policy\nSince the course moves very quickly, if you are submitting work late that means you are falling behind on other material and it may be difficult for you to recover. Therefore, I have a fairly strict lateness policy.\n\nAll major assignments are due at 11:59:00 pm. Not 11:59:01 or 11:59:31.\nIf it is later than 11:59:00 pm, then the assignment will be assessed a 5% lateness penalty\nIf it is later than 12:29:00 am, then the assignment will be assessed a 10% lateness penalty\nIf it is later than 11:59:00 pm the next day, the assignment will be assessed a 50% lateness penalty\nIf it is later than 2 days from the due date, I will no longer accept the assignment\n\n\nPlease be sure to check that your homework is complete and make sure to submit it a few minutes early. You can submit multiple times on Teams so make sure you have a nearly complete version uploaded even if you want to keep working on it right up to the deadline. I will not be sympathetic to messages that complain of computer problems when you are trying to submit for the first time at 11:58:51 pm."
-  },
-  {
-    "objectID": "index.html#attendance-policy",
-    "href": "index.html#attendance-policy",
-    "title": "Course Introduction",
-    "section": "Attendance Policy",
-    "text": "Attendance Policy\nClass will be highly interactive and therefore it is to your advantage to attend class. I do not take roll but if you are not in class for the beginning of class quiz there is no opportunity to make it up without a valid excused absence (doctor’s note, absence arranged in advance, etc.). The lecture will have a number of points on which I will ask students to modify some code and return a result and doing these exercises is mandatory. If you are called on to provide your solution but are not attending the lecture without previously notifying me, it will also be quite embarrassing for you!"
-  },
-  {
-    "objectID": "index.html#contact-policy",
-    "href": "index.html#contact-policy",
-    "title": "Course Introduction",
-    "section": "Contact Policy",
-    "text": "Contact Policy\n\nI usually try to reply to emails on the same day (though not in the evenings), however responses may be slower on the weekend\nDo not email me 2 hours before a homework is due and expect an immediate response!\nFor general questions, such as how should one interpret a question on a homework or quiz, you should ask the question in the Discussion section of the Canvas website. That way others can benefit from the response or someone else may be able to answer more quickly than I can. If you email me a question that really belongs in the help channel I will ask you to repost it.\nMany questions can be answered by carefully checking the class website or reviewing the materials in on Canvas. If in doubt, though, feel free to ask."
-  },
-  {
-    "objectID": "index.html#chatgpt-and-similar-policy",
-    "href": "index.html#chatgpt-and-similar-policy",
-    "title": "Course Introduction",
-    "section": "ChatGPT (and similar) Policy",
-    "text": "ChatGPT (and similar) Policy\nUnless otherwise specified on an assignment, you may use ChatGPT as much as you wish. However, most of the assignments in this class are not very amenable to ChatGPT help. Your main grade will be understanding, annotating, and interpreting your output. Producing the output is the very simple minimal requirement. Also, ChatGPT often makes many coding mistakes. If you rely too much on ChatGPT to code, you will not understand when it makes mistakes and why it makes mistakes."
-  },
-  {
-    "objectID": "index.html#academic-dishonesty-policy",
-    "href": "index.html#academic-dishonesty-policy",
-    "title": "Course Introduction",
-    "section": "Academic Dishonesty Policy",
-    "text": "Academic Dishonesty Policy\nDon’t cheat. Don’t be that person. Yes, you. You know exactly what I’m talking about too.\nMore specifically, you are expected to strictly adhere to the Duke Kunshan University Community Standard in all of your work and participation, and violations will be enforced. More details can be found here.\nAll work must be done exclusively by the individual to whom it has been assigned. You should assume that collaboration on assignments, the use of previously-assigned homework, quizzes and answer keys, outside sources or outside aids (both written and electronic) are not allowed unless explicitly noted in the assignment guidelines or in this syllabus. All cases of suspected cheating will be referred for adjudication to the Dean’s Office. Any violation for which a student is found responsible is considered grounds for failure in the course.\nIt may sound cliché to say, but if you cheat and borrow other’s code or answers you are only cheating yourself; you will not learn how to do statistics and doing so will mean you will do worse on the midterm and the final anyway. Cheating is ultimately self-defeating so for both of our benefit, please, don’t do it. If you are having trouble completing the assignment and feel tempted to cheat, please contact me directly instead with the difficulties you are having."
-  },
-  {
-    "objectID": "index.html#disabilities-policy",
-    "href": "index.html#disabilities-policy",
-    "title": "Course Introduction",
-    "section": "Disabilities Policy",
-    "text": "Disabilities Policy\nIf you need an accommodation due to a disability, you should not hesitate to request one. The process is that requests should be sent to the Dean of Undergraduate Studies, who will contact me with recommended type of accommodation that is needed. You do not need to disclose your reason for requesting an accommodation with me, and asking through the Dean of Undergraduate Studies helps make things official for both you and me."
-  },
-  {
-    "objectID": "homework.html",
-    "href": "homework.html",
-    "title": "Homework",
-    "section": "",
-    "text": "Unit 1 homework (due Sunday, January 19 at 23:59:00)\n\nUnit 1 homework\nUnit 1 homework sample solutions\n\n\n\nUnit 2 homework (due Tuesday, February 4 at 23:59:00)\n\nUnit 2 homework\n[Unit 2 homework sample solutions]\n\n\n\nUnit 3 exam (Wednesday, February 19 from 2:45 to 4:00 pm)\n\n[Unit 3 exam]\n[Unit 3 exam sample solutions]\n\n\n\nFinal project (due Wednesday, March 5 at 23:59:00)\n\n[Final project]"
-  },
-  {
     "objectID": "schedulematerials.html",
     "href": "schedulematerials.html",
     "title": "Course Schedule and Class Materials",
@@ -354,7 +291,7 @@
     "href": "schedulematerials.html#lecture-3.1-confidence-intervals---proportions-thursday-february-5",
     "title": "Course Schedule and Class Materials",
     "section": "Lecture 3.1: Confidence intervals - proportions (Thursday, February 5)",
-    "text": "Lecture 3.1: Confidence intervals - proportions (Thursday, February 5)\n\nNote the special class time!\n\nReading to do before class: Chapter 13\nTopics covered:\n\nWhat is a sampling distribution?\nWhen does the normal model apply?\nConstructing a confidence interval\nInterpreting a confidence interval\nLecture webpage: [Lecture 3.1]\nLecture activity: [Lecture 3.1 activity]"
+    "text": "Lecture 3.1: Confidence intervals - proportions (Thursday, February 5)\n\nNote the special class time!\n\nReading to do before class: Chapter 13\nTopics covered:\n\nWhat is a sampling distribution?\nWhen does the normal model apply?\nConstructing a confidence interval\nInterpreting a confidence interval\nLecture webpage: Lecture 3.1\nLecture activity: [Lecture 3.1 activity]"
   },
   {
     "objectID": "schedulematerials.html#no-lab-on-thursday-february-5",
@@ -453,6 +390,104 @@
     "title": "Course Schedule and Class Materials",
     "section": "Final project (due Wednesday, March 5 at 23:59:00)",
     "text": "Final project (due Wednesday, March 5 at 23:59:00)\n\nHomework files: Final project instructions"
+  },
+  {
+    "objectID": "homework.html",
+    "href": "homework.html",
+    "title": "Homework",
+    "section": "",
+    "text": "Unit 1 homework (due Sunday, January 19 at 23:59:00)\n\nUnit 1 homework\nUnit 1 homework sample solutions\n\n\n\nUnit 2 homework (due Tuesday, February 4 at 23:59:00)\n\nUnit 2 homework\n[Unit 2 homework sample solutions]\n\n\n\nUnit 3 exam (Wednesday, February 19 from 2:45 to 4:00 pm)\n\n[Unit 3 exam]\n[Unit 3 exam sample solutions]\n\n\n\nFinal project (due Wednesday, March 5 at 23:59:00)\n\n[Final project]"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course Introduction",
+    "section": "",
+    "text": "Monday/Wednesday class at 12:00 pm to 2:30 pm in IB2071 (except February 12 - IB 2020)\nWednesday lab 2:45 pm to 4:00 pm in IB2071\nOffice hours -\n\nTuesday 10:00 am to 12:00 pm in WDR 3114\nTuesday 1:30 pm to 3:30 pm in WDR 3114\n\nHomeworks are all due at 11:59 pm\nAll other announcements and information are posted on the class Canvas site"
+  },
+  {
+    "objectID": "index.html#assessment",
+    "href": "index.html#assessment",
+    "title": "Course Introduction",
+    "section": "Assessment",
+    "text": "Assessment\n\nBeginning of class warmup quiz 10%: At the start of each class session there will be a series of short online questions to start discussion of the class material. I will drop your two lowest quiz grades. I will also curve the grade such that the student with the highest overall quiz grade will receive 100% and all other students will receive a corresponding boost to their grade.\nHomework 60%: At the end of the first two groups of content, a homework will be assigned that will ask you to analyze a dataset and answer questions related to that concept group. These homeworks are due at the noted date at 11:59 pm China time. Each homework will also have a best graph contest, where the person whose classmates vote as having the best graph wins some extra credit points.\n\nHomework 1: 15%\nHomework 2: 20%\nFinal project: 25%\n\nHomework checks 3%: To make sure you are making good progress on your homework, the Sunday before the homework is due (except for the first homework) you will be required to submit your progress on the homework so far. You are required to have tried to have answered all the questions covered by the lectures and textbook up to the specified cutoff. I will not check your answers but rather check to see if you have made a good effort to answer all the questions derived from the material already covered. If you have a reasonable answer for each question checked you will get full points. If you have not made an effort to answer all the questions reviewed you will get a zero.\nUnit 3 exam 20%: Unit 3 comprehension is better checked through an in-class exam. The exam will be open notes but closed book and will take place during the normal lab session that week.\nData Camp labs 5%: A number of labs on the website Data Camp will be assigned to you; these labs are pass/fail and you will receive full credit if you complete each of the labs by the specified due date.\nSyllabus quiz 1%: A short quiz after the first class regarding the course requirements.\nPlacement exams 1%: A short quiz that you will take at both the start and end of class to measure how much pre-knowledge you have and how much knowledge you have gained during the course. Exams are pass/fail depending on if you complete them or not\nExtra credit maximum 3%: You have several opportunities to earn extra credit. There will be three graph contests, whereby the student who is voted by the other students as having the best graph will receive extra credit points. You can also earn some extra credit by replying to other students who post problems in the Discussion section of the Canvas website."
+  },
+  {
+    "objectID": "index.html#lateness-policy",
+    "href": "index.html#lateness-policy",
+    "title": "Course Introduction",
+    "section": "Lateness policy",
+    "text": "Lateness policy\nSince the course moves very quickly, if you are submitting work late that means you are falling behind on other material and it may be difficult for you to recover. Therefore, I have a fairly strict lateness policy.\n\nAll major assignments are due at 11:59:00 pm. Not 11:59:01 or 11:59:31.\nIf it is later than 11:59:00 pm, then the assignment will be assessed a 5% lateness penalty\nIf it is later than 12:29:00 am, then the assignment will be assessed a 10% lateness penalty\nIf it is later than 11:59:00 pm the next day, the assignment will be assessed a 50% lateness penalty\nIf it is later than 2 days from the due date, I will no longer accept the assignment\n\n\nPlease be sure to check that your homework is complete and make sure to submit it a few minutes early. You can submit multiple times on Teams so make sure you have a nearly complete version uploaded even if you want to keep working on it right up to the deadline. I will not be sympathetic to messages that complain of computer problems when you are trying to submit for the first time at 11:58:51 pm."
+  },
+  {
+    "objectID": "index.html#attendance-policy",
+    "href": "index.html#attendance-policy",
+    "title": "Course Introduction",
+    "section": "Attendance Policy",
+    "text": "Attendance Policy\nClass will be highly interactive and therefore it is to your advantage to attend class. I do not take roll but if you are not in class for the beginning of class quiz there is no opportunity to make it up without a valid excused absence (doctor’s note, absence arranged in advance, etc.). The lecture will have a number of points on which I will ask students to modify some code and return a result and doing these exercises is mandatory. If you are called on to provide your solution but are not attending the lecture without previously notifying me, it will also be quite embarrassing for you!"
+  },
+  {
+    "objectID": "index.html#contact-policy",
+    "href": "index.html#contact-policy",
+    "title": "Course Introduction",
+    "section": "Contact Policy",
+    "text": "Contact Policy\n\nI usually try to reply to emails on the same day (though not in the evenings), however responses may be slower on the weekend\nDo not email me 2 hours before a homework is due and expect an immediate response!\nFor general questions, such as how should one interpret a question on a homework or quiz, you should ask the question in the Discussion section of the Canvas website. That way others can benefit from the response or someone else may be able to answer more quickly than I can. If you email me a question that really belongs in the help channel I will ask you to repost it.\nMany questions can be answered by carefully checking the class website or reviewing the materials in on Canvas. If in doubt, though, feel free to ask."
+  },
+  {
+    "objectID": "index.html#chatgpt-and-similar-policy",
+    "href": "index.html#chatgpt-and-similar-policy",
+    "title": "Course Introduction",
+    "section": "ChatGPT (and similar) Policy",
+    "text": "ChatGPT (and similar) Policy\nUnless otherwise specified on an assignment, you may use ChatGPT as much as you wish. However, most of the assignments in this class are not very amenable to ChatGPT help. Your main grade will be understanding, annotating, and interpreting your output. Producing the output is the very simple minimal requirement. Also, ChatGPT often makes many coding mistakes. If you rely too much on ChatGPT to code, you will not understand when it makes mistakes and why it makes mistakes."
+  },
+  {
+    "objectID": "index.html#academic-dishonesty-policy",
+    "href": "index.html#academic-dishonesty-policy",
+    "title": "Course Introduction",
+    "section": "Academic Dishonesty Policy",
+    "text": "Academic Dishonesty Policy\nDon’t cheat. Don’t be that person. Yes, you. You know exactly what I’m talking about too.\nMore specifically, you are expected to strictly adhere to the Duke Kunshan University Community Standard in all of your work and participation, and violations will be enforced. More details can be found here.\nAll work must be done exclusively by the individual to whom it has been assigned. You should assume that collaboration on assignments, the use of previously-assigned homework, quizzes and answer keys, outside sources or outside aids (both written and electronic) are not allowed unless explicitly noted in the assignment guidelines or in this syllabus. All cases of suspected cheating will be referred for adjudication to the Dean’s Office. Any violation for which a student is found responsible is considered grounds for failure in the course.\nIt may sound cliché to say, but if you cheat and borrow other’s code or answers you are only cheating yourself; you will not learn how to do statistics and doing so will mean you will do worse on the midterm and the final anyway. Cheating is ultimately self-defeating so for both of our benefit, please, don’t do it. If you are having trouble completing the assignment and feel tempted to cheat, please contact me directly instead with the difficulties you are having."
+  },
+  {
+    "objectID": "index.html#disabilities-policy",
+    "href": "index.html#disabilities-policy",
+    "title": "Course Introduction",
+    "section": "Disabilities Policy",
+    "text": "Disabilities Policy\nIf you need an accommodation due to a disability, you should not hesitate to request one. The process is that requests should be sent to the Dean of Undergraduate Studies, who will contact me with recommended type of accommodation that is needed. You do not need to disclose your reason for requesting an accommodation with me, and asking through the Dean of Undergraduate Studies helps make things official for both you and me."
+  },
+  {
+    "objectID": "lectures/lecture.3.1.html#the-sampling-distribution-model-for-a-proportion",
+    "href": "lectures/lecture.3.1.html#the-sampling-distribution-model-for-a-proportion",
+    "title": "Confidence Intervals - Proportions",
+    "section": "The sampling distribution model for a proportion",
+    "text": "The sampling distribution model for a proportion\n\nSampling model\n\nDraw samples at random, n=100n=100\nSamples vary\nCan’t draw all samples of size 100, astronomical\nDraw a few thousand samples\nDistribution is called the sampling distribution of the proportion.\n\nWhat shape do you think the sampling distribution will have if we have sample size n=100n=100?\n\n\n\n\n\n\n\n\n\n\nGraph of a sampling distribution\n\nRemember, this is not a graph of the actual distribution\n\n\n\n\n\n\n\n\n\n\n\nRandom matters\n\nSampling distribution for a proportion\n\nSymmetric - check\nUnimodal - check\nCentered at pp: 0.853\nStandard deviation: 0.035\nFollows the Normal model - check\n\n\n\n\nThe Normal model for sampling\n\nSamples don’t all have the same proportion.\nNormal model is the right one for sample proportions.\nModeling how sample statistics, proportions or means, vary from sample to sample is powerful.\nAllows us to quantify that variation.\nMake statements about corresponding population parameter.\nMake model for random behavior, then understand and and use that model.\n\n\n\nWhicn Normal model to choose?\n\nReminder: normal model is N(μ,σ2)N(\\mu, \\sigma^2)\nμ\\mu or mean is pp, or the proportion we want to estimate, nn is sample size\nFor proportions, σ(p)=p(1−p)n\\sigma(p) = \\sqrt{\\frac{p(1-p)}{n}}\nThis is the standard deviation of the SAMPLING DISTRIBUTION, that is the distribution of pp across infinite samples\n\n\n\nMean and standard deviation\n\n\n\n\n\n\n\n\n\n\nReminder - Normal model rule\n\nUsing this normal model rule, we can tell how likely it is to have a certain p̂\\hat{p} given the sampling distribution normal model\nRemember the 68–95–99.7 (1 sd, 2 sd, 3 sd), for other distances use technology\nMost common: 95% of samples have sample proportion within two standard deviations of the true population proportion.\nKnowing the sampling distribution tells us how much variation to expect\nCalled the sampling error in some contexts\nNot really an error, just variability\nBetter to call it sampling variability"
+  },
+  {
+    "objectID": "lectures/lecture.3.1.html#when-does-the-normal-model-work",
+    "href": "lectures/lecture.3.1.html#when-does-the-normal-model-work",
+    "title": "Confidence Intervals - Proportions",
+    "section": "When does the normal model work?",
+    "text": "When does the normal model work?\n\nIndependence Assumption: check data collected in a way that makes this assumption plausible\nRandomization Condition: subjects randomly assigned treatments, or survey is simple random sample\n10% Condition: sample size less than 10% of the population size\nSuccess Failure Condition: there must be at least 10 expected successes and failures. np̂≥10n\\hat{p}\\geq10 and n̂p≥10\\hat{n}p\\geq10\n\n\nWhen does the normal model fail for the sampling distribution?\n\npp close to 0 or 1\nPeople in this class that can dunk a basketball\nSample size 100\n\nIf true p=0.001p = 0.001, then probably none in sample of 100\n\nIf we simulated samples of size 100 with p=0.001p = 0.001\n\nDistribution skewed right, can’t rely on normal model percentages anymore\n\nnn is fine, but pp is too small\n\nWhat will the shape of the sampling distribution look like if p=0.001p = 0.001?\n\n\n\n\n\n\n\n\n\n\nExample simulation\n\n\n\n\n\n\n\n\n\n\nClass sampling exercise\n\nWe know that about 50% of students at DKU plan to or have selected a major in the natural sciences\n? % of students in our class plan to major in the natural sciences in our class\n\nIs our class unusually small?\n\nCheck conditions\n\nRandomization condition\n10% condition\nSuccess failure condition\n\n\n\n\nFind how far we are from the population mean\n\nPopulation standard deviation formula is:\n\np(1−p)n\\frac{\\sqrt{p(1-p)}}{\\sqrt{n}}\np̂\\hat{p} is the proportion of yeses\nnn is the sample size\n\nWe are calculating using the population sampling SDSD since we know it\n\nIf we don’t know the population sampling SDSD we have to use a different strategy, but not the case here\n\nKnowing the SDSD, we can create a z score for the difference between our class and the population\n\nz score is how many SDSDs our class is from the population mean\n\n(classscore−dkumean)/SD(class score - dkumean) / SD\n\n\n\n\n\nNormal distribution percentages\n\n\n\n\n\n\n\n\n\n\nCalculation for our class\n\np(1−p)n\\frac{\\sqrt{p(1-p)}}{\\sqrt{n}}\np̂\\hat{p} is the proportion of yeses\nnn is the sample size\np̂−pSD(p)\\frac{\\hat{p} - p}{SD(p)}\n68-95-99.7 Rule: Values ?SDSD above the mean occur less than ?% of the time. Our class mean appears to be far/near from the population mean\n\nCalculate the how likely our result would be if our class is a random sample of DKU students."
+  },
+  {
+    "objectID": "lectures/lecture.3.1.html#confidence-intervals-of-proportions",
+    "href": "lectures/lecture.3.1.html#confidence-intervals-of-proportions",
+    "title": "Confidence Intervals - Proportions",
+    "section": "Confidence intervals of proportions",
+    "text": "Confidence intervals of proportions\n\nStandard errors for proportions\n\nWhat is the sampling distribution?\nUsually we do not know the population proportion pp.\nTherefore, we cannot find the standard deviation of the sampling distribution p(1−p)n\\frac{\\sqrt{p(1-p)}}{\\sqrt{n}}\nAfter taking a sample, we only know the sample proportion, which we use as an approximation (called the standard error)\n\np̂(1−p̂)n\\frac{\\sqrt{\\hat{p}(1-\\hat{p})}}{\\sqrt{n}}\n\n\n\n\nExample: bedrooms\n\nDraw a random sample of 100 houses\n\n\n\n\n\n\n\n\n\n\np̂(1−p̂)100\\frac{\\sqrt{\\hat{p}(1-\\hat{p})}}{\\sqrt{100}}\nThe sampling distribution should be approximately normal\n\n\n\nWhat is a confidence interval?\n\nConfidence interval: a way to express the range of plausible values for the parameter (in this case, percent of homes with three bedrooms)\nWe never know the true value but we want to say something about how wide the range of possible values are\nWhat is a reasonable range?\n\nTraditionally, 95% (about two standard deviations) of the standard error distribution\nMean of our sample ±\\pm range of possible values we could get if we took additional samples\n\n\n\n\nExample: bedrooms\n\nOur mean: 0.87\nOur estimated sampling distribution standard error:\n\np̂(1−p̂)100\\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{100}}\n0.87̂(1−0.87̂)100\\sqrt{\\frac{\\hat{0.87}(1-\\hat{0.87})}{100}}\n0.7569100\\sqrt{\\frac{0.7569}{100}}\n0.007569\\sqrt{0.007569}\n0.0870.087\n\nA range of reasonable values if we sampled this again:\n\n2×0.0872\\times0.087\n0.87±0.1740.87\\pm0.174\n\n\nStatement: we are ~95% confident that this interval contains the true proportion of houses with three or more bedrooms in the population\n\n\nCritical values\n\nCritical values are the cutoff we use to determine what is ‘reasonable’\nDerived from the Normal model\nCan use any z-score as a cutoff\nCorresponding multiplier of the SE is called the critical value.\nNormal model for this interval, it is denoted z*z^*.\nTo find, need to use computer, calculator, Normal probability table\n\n\n\n\n\n\n\n\n\n\n\nRecap\n\nMake sure conditions are met, then find level C confidence interval for p̂\\hat{p}, our population mean estimate\nConfidence interval is defined as p̂±z*×SE(p̂)\\hat{p}\\pm z^* \\times SE(\\hat{p})\nSE(p̂)SE(\\hat{p}) estimated by p̂(1−p̂)n\\frac{\\sqrt{\\hat{p}(1-\\hat{p})}}{\\sqrt{n}}\nz*z^* specifies number of SEs needed for C% of random samples to yield confidence intervals that capture the true parameter\n\n\n\nWhat you cannot say about pp from the sample\n\n“0.87 of all houses in King County have at least three bedrooms.”\n\n\nNo. Observations vary. Another sample would yield a different sample proportion.\n\n\n“It is probably true that 0.87 of all houses in King County have at least three bedrooms.”\n\n\nNo again. In fact, even if we didn’t know the true proportion, we’d know that it’s probably not 0.87.\n\n\n\nWhat you cannot say about pp from the sample\n\n“We don’t know exactly what proportion of houses in King County have at least three bedrooms, but we know that it’s within the interval 0.87±2×0.0870.87\\pm2\\times0.087.”\n\n\n\nNo but getting closer. We don’t know this for sure.\n\n\n“We don’t know exactly what proportion of houses in King County have at least three bedrooms, but the interval from 0.696 to 1.044 probably contains the true proportion.”\n\n\nRight but can be more precise. We should specify how confident we are not just say probably\n\n\n\nWhat you can say about pp from the sample\n\n“We are 95% confident that between 0.696 and 1.044 of houses in King County have at least three bedrooms.”\n\n\nStatements like these are called confidence intervals. They’re the best we can do.\n\n\n\nNaming the confidence interval\n\nThis confidence interval is a one-proportion z-interval.\n\n“One” since there is a single mean being calculated.\n“Proportion” since we are interested in the proportion of the population.\n“z-interval” since the distance of the interval relies on a normal sampling distribution model."
+  },
+  {
+    "objectID": "lectures/lecture.3.1.html#interpreting-confidence-intervals",
+    "href": "lectures/lecture.3.1.html#interpreting-confidence-intervals",
+    "title": "Confidence Intervals - Proportions",
+    "section": "Interpreting confidence intervals",
+    "text": "Interpreting confidence intervals\n\nCapturing a proportion\n\nThe confidence interval may or may not contain the true population proportion.\nConsider repeating the study over an over again, each time with the same sample size.\nEach time we would get a different p̂\\hat{p}\nFrom each p̂\\hat{p}, a different confidence interval could be computed.\nAbout 95% of these confidence intervals will capture the true proportion.\n5% will be duds.\n\n\n\nRandom matters - confidence intervals\n\nThere are a huge number of confidence intervals that could be drawn.\nIn theory, all the confidence intervals could be listed.\n\n95% will “work” (capture the true proportion).\n5% will be “duds” (not capture the true proportion).\n\nWhat about our confidence interval (0.696, 1.044)?\n\nIn this case, we can find out the true value\nMost of the time we never know\n\n\n\n\n\n\n\n\n\n\n\n\nRandom matters - confidence intervals\n\n\n\n100 samples CI"
+  },
+  {
+    "objectID": "lectures/lecture.3.1.html#margin-of-error-certainty-vs.-precision",
+    "href": "lectures/lecture.3.1.html#margin-of-error-certainty-vs.-precision",
+    "title": "Confidence Intervals - Proportions",
+    "section": "Margin of error: certainty vs. precision",
+    "text": "Margin of error: certainty vs. precision\n\nMargin of error\n\nConfidence interval for a population proportion: p̂±2×SE(p̂)\\hat{p} \\pm 2\\times SE(\\hat{p})\nThe distance, 2×SE(p̂)~2\\times SE(\\hat{p}), from p̂\\hat{p} is called the margin of error\nConfidence intervals can be applied to many statistics, not just means. Regression slopes and other quantities can also have confidence intervals.\n\nIn general, a confidence interval has the form estimate ±\\pm margin of error\n\n\n\n\nCertainty vs. precision\n\nCompeting goals\n\nMore certainty, need to capture pp more often, need to make the interval wider.\nMore precise, need to provider tighter bounds on our estimate for pp, need to make the interval narrower\n\nInstead of a 95% confidence interval, any percent can be used.\n\nIncreasing the confidence (e.g. 99%) increases the margin of error.\n\nNeed to make our range wider to make sure we don’t ‘miss’\n\nDecreasing the confidence (e.g. 90%) decreases the margin of error.\n\nNeed to make our range smaller so as to be more specific about our guess\n\n\n\n\n\nWhat sample size?\n\nCan increase both certainty and precision by increasing sample size\nFor 95%, z*z^* = 1.96\nValues that make ME largest are p̂=0.5\\hat{p}=0.5\nIf we want to ensure, say, a margin of error of &lt;3&lt;3%\n\nME=z×p̂(1−p̂)nME = z\\times \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\n0.03=1.96×(0.5)(0.5)n0.03 = 1.96\\times \\sqrt{\\frac{(0.5)(0.5)}{n}}\n\nSolving for nn, gives n≈1067.1n\\approx1067.1\nWe need to survey at least 1068 to ensure a ME less than 0.03 for the 95% confidence interval.\n\n\n\nThoughts on sample size and ME\n\nObtaining a large sample size can be expensive and/or take a long time.\nFor a pilot study, ME=10ME = 10% can be acceptable.\nFor full studies, ME&lt;5ME &lt; 5% is better.\nPublic opinion polls typically use ME=3ME = 3%, n=1000n = 1000\nIf pp is expected to be very small such as 0.005, then much smaller ME such as 0.1% is required.\n\nCommon in medical studies"
   },
   {
     "objectID": "lectures/lecture.2.4.html#basic-multiple-regression-interpretation",
@@ -606,7 +641,7 @@
     "href": "rmanual.html#helpful-summary-functions",
     "title": "R Manual",
     "section": "Helpful summary functions",
-    "text": "Helpful summary functions\n\nSummarizing data\nThe simpliest way to summarize data is the summary() command.\n\nsummary(mtcars$mpg)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  10.40   15.43   19.20   20.09   22.80   33.90 \n\n\nTo develop more complex summary statistics, you can use longer piped structures from dplyr as follows:\n\nmtcars %&gt;%\n  group_by(cyl) %&gt;%\n  summarise(mean = mean(wt), n = n())\n\n# A tibble: 3 × 3\n    cyl  mean     n\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1     4  2.29    11\n2     6  3.12     7\n3     8  4.00    14\n\n\nTo view more samples of the summarize() function, see here:\nSummarize documetation\n\n\nFinding normal distribution & quantile information\nIf you want to find out details of the normal distribution, there are a suite of function in R that can report the quantile of a specific number of standard deviations from the center of a normal distribution or the reverse.\n\n# What is the amount of area under the normal curve cumulative up to +2 sd from the mean \npnorm(2, mean=0, sd=1)\n\n[1] 0.9772499\n\n# At how many standard deviations away from the mean is 97.5% of the area under the normal curve\nqnorm(0.975, mean=0, sd=1)\n\n[1] 1.959964\n\n\nIf you have an arbitrary distribution (that may not necessarily be normally distributed), you can find a quantile for a given percentage of area under the curve with the quantile() function.\n\n# generate a uniform distribution\ndist&lt;-runif(1000, min=0, max=1)\n\n# theoretically, the quantile should match the probability for a uniform distribution\nquantile(dist, probs=0.5)\n\n      50% \n0.5000664"
+    "text": "Helpful summary functions\n\nSummarizing data\nThe simpliest way to summarize data is the summary() command.\n\nsummary(mtcars$mpg)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  10.40   15.43   19.20   20.09   22.80   33.90 \n\n\nTo develop more complex summary statistics, you can use longer piped structures from dplyr as follows:\n\nmtcars %&gt;%\n  group_by(cyl) %&gt;%\n  summarise(mean = mean(wt), n = n())\n\n# A tibble: 3 × 3\n    cyl  mean     n\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1     4  2.29    11\n2     6  3.12     7\n3     8  4.00    14\n\n\nTo view more samples of the summarize() function, see here:\nSummarize documetation\n\n\nFinding normal distribution & quantile information\nIf you want to find out details of the normal distribution, there are a suite of function in R that can report the quantile of a specific number of standard deviations from the center of a normal distribution or the reverse.\n\n# What is the amount of area under the normal curve cumulative up to +2 sd from the mean \npnorm(2, mean=0, sd=1)\n\n[1] 0.9772499\n\n# At how many standard deviations away from the mean is 97.5% of the area under the normal curve\nqnorm(0.975, mean=0, sd=1)\n\n[1] 1.959964\n\n\nIf you have an arbitrary distribution (that may not necessarily be normally distributed), you can find a quantile for a given percentage of area under the curve with the quantile() function.\n\n# generate a uniform distribution\ndist&lt;-runif(1000, min=0, max=1)\n\n# theoretically, the quantile should match the probability for a uniform distribution\nquantile(dist, probs=0.5)\n\n      50% \n0.5114814"
   },
   {
     "objectID": "rmanual.html#frequency-table-and-contingency-table",
