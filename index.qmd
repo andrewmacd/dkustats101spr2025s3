@@ -8,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Course at a glance
 
--   Monday/Wednesday class at 12:00 pm to 2:30 pm in IB2071 (except February 12 - IB 2020)
+-   Monday/Wednesday class at 12:00 pm to 2:30 pm in IB2071 (except February 12 - IB 2028)
 -   Wednesday lab 2:45 pm to 4:00 pm in IB2071
 -   Office hours -
     -   Tuesday 10:00 am to 12:00 pm in WDR 3114
