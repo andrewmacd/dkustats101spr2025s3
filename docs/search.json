@@ -189,6 +189,132 @@
     "text": "Margin of error: certainty vs. precision\n\nMargin of error\n\nConfidence interval for a population proportion: p̂±2×SE(p̂)\\hat{p} \\pm 2\\times SE(\\hat{p})\nThe distance, 2×SE(p̂)~2\\times SE(\\hat{p}), from p̂\\hat{p} is called the margin of error\nConfidence intervals can be applied to many statistics, not just means. Regression slopes and other quantities can also have confidence intervals.\n\nIn general, a confidence interval has the form estimate ±\\pm margin of error\n\n\n\n\nCertainty vs. precision\n\nCompeting goals\n\nMore certainty, need to capture pp more often, need to make the interval wider.\nMore precise, need to provider tighter bounds on our estimate for pp, need to make the interval narrower\n\nInstead of a 95% confidence interval, any percent can be used.\n\nIncreasing the confidence (e.g. 99%) increases the margin of error.\n\nNeed to make our range wider to make sure we don’t ‘miss’\n\nDecreasing the confidence (e.g. 90%) decreases the margin of error.\n\nNeed to make our range smaller so as to be more specific about our guess\n\n\n\n\n\nWhat sample size?\n\nCan increase both certainty and precision by increasing sample size\nFor 95%, z*z^* = 1.96\nValues that make ME largest are p̂=0.5\\hat{p}=0.5\nIf we want to ensure, say, a margin of error of &lt;3&lt;3%\n\nME=z×p̂(1−p̂)nME = z\\times \\sqrt{\\frac{\\hat{p}(1-\\hat{p})}{n}}\n0.03=1.96×(0.5)(0.5)n0.03 = 1.96\\times \\sqrt{\\frac{(0.5)(0.5)}{n}}\n\nSolving for nn, gives n≈1067.1n\\approx1067.1\nWe need to survey at least 1068 to ensure a ME less than 0.03 for the 95% confidence interval.\n\n\n\nThoughts on sample size and ME\n\nObtaining a large sample size can be expensive and/or take a long time.\nFor a pilot study, ME=10ME = 10% can be acceptable.\nFor full studies, ME&lt;5ME &lt; 5% is better.\nPublic opinion polls typically use ME=3ME = 3%, n=1000n = 1000\nIf pp is expected to be very small such as 0.005, then much smaller ME such as 0.1% is required.\n\nCommon in medical studies"
   },
   {
+    "objectID": "lectures/lecture.3.4.html#t-vs.-z",
+    "href": "lectures/lecture.3.4.html#t-vs.-z",
+    "title": "Hypothesis Testing Wisdom",
+    "section": "tt vs. zz",
+    "text": "tt vs. zz\n\ntt vs. zz test\n\n\n\nKnow σ\\sigma\nVariable is continuous\nVariable is proportion\n\n\n\n\nYes\nz×SDsamplingdist=zσnz\\times SD_{samplingdist}=z\\frac{\\sigma}{\\sqrt{n}}\nz×SDsamplingdist=zpqnz\\times SD_{samplingdist}=z\\sqrt{\\frac{pq}{n}}\n\n\nNo\ntdf×SE=tdfsnt_{df}\\times SE=t_{df}\\frac{s}{\\sqrt{n}}\nDepends on CI vs. hypothesis test\n\n\n\n\n\nWhen to use true population parameter\n\n\n\nKnow σ\\sigma\nHypothesis test\nConfidence interval\n\n\n\n\nYes\npqpq from null\nIf sample is representative, pqpq\n\n\n\nz×SDsamplingdist=zpqnz\\times SD_{samplingdist}=z\\sqrt{\\frac{pq}{n}}\nz×SDsamplingdist=zpqnz\\times SD_{samplingdist}=z\\sqrt{\\frac{pq}{n}}\n\n\nNo\npqpq from null\nUse p̂q̂\\hat{p}\\hat{q}\n\n\n\nz×SE=zpqnz\\times SE=z\\sqrt{\\frac{pq}{n}}\nz×SE=zp̂q̂nz\\times SE=z\\sqrt{\\frac{\\hat{p}\\hat{q}}{n}}"
+  },
+  {
+    "objectID": "lectures/lecture.3.4.html#choosing-the-right-hypothesis-test",
+    "href": "lectures/lecture.3.4.html#choosing-the-right-hypothesis-test",
+    "title": "Hypothesis Testing Wisdom",
+    "section": "Choosing the right hypothesis test",
+    "text": "Choosing the right hypothesis test\n\nAlternatives - two sided\n\n\n\nTwo sided test\n\n\n\n\nAlternatives - two sided\n\nOld rate is 20%. H0:p=0.20H_0: p = 0.20\nError could be in either direction HA:p≠0.20H_A: p \\neq 0.20\n\n\n\nAlternatives - one sided\n\n\n\nOne sided test\n\n\n\n\nAlternatives - one sided\n\nInterested only in a decrease in the rate: HA:p&lt;0.20H_A: p &lt; 0.20\nOne-sided alternative\n\n\n\nAlternatives - one sided\n\nOne-sided: pp value is probability only in the direction of the alternative away from the null hypothesis value.\nOne-sided pp value is half the two-sided pp value.\nOne-sided test will reject the null hypothesis more often.\nGreat that it rejects the null hypothesis more often when it is false but not so much when it rejects it more often when it is true!\nTwo-sided rejects less often\nSo use two-sided unless you can justify using one-sided\nAdvantage of two-sided test is results matched to CI."
+  },
+  {
+    "objectID": "lectures/lecture.3.4.html#confidence-interval-test",
+    "href": "lectures/lecture.3.4.html#confidence-interval-test",
+    "title": "Hypothesis Testing Wisdom",
+    "section": "Confidence interval test",
+    "text": "Confidence interval test\n\nTwo ways to test a hypothesis\nWay 1: Construct CI, assume null is true, evaluate: is your value a likely mean of null quantity\n\nSelect nullnull\nSelect critical value of tdft_{df}\ntdfSEt_{df}SE or tdfsnt_{df}\\frac{s}{\\sqrt{n}}\nCI: null±tdfSEnull\\pm t_{df}SE\nIs your observed value within the CI?\n\nIf yes, value consistent with null\nIf no, reject null\n\n\n\n\nExample: vineyards\n\n\n\nMy family’s vineyard\n\n\n\n\nExample: vineyards\n\n\n\nFinger Lakes wine district\n\n\n\n\nExample: vineyard size\n\nSelect null: hectaresnull=19.8hectares_{null} = 19.8\nSelect critical value of tdf=0.05t_{df} = 0.05\ntdf×SEt_{df}\\times SE or tdfsn=2.0319.336t_{df}\\frac{s}{\\sqrt{n}}=2.03\\frac{19.3}{\\sqrt{36}}\ny‾=19\\bar{y}=19\nCI: 19±6.519\\pm6.5\nIs the null value within the CI?\nNull: 19.819.8, yes within CI\nCannot reject null"
+  },
+  {
+    "objectID": "lectures/lecture.3.4.html#p-value-test",
+    "href": "lectures/lecture.3.4.html#p-value-test",
+    "title": "Hypothesis Testing Wisdom",
+    "section": "pp value test",
+    "text": "pp value test\n\nWay 2: Estimate the specific likelihood of observing your mean if we expect the null hypothesis to be true\n\nSelect null\nSet critical value derived from tdft_{df}\ntscoredifference=observed−nullSEtscore_{difference}=\\frac{observed-null}{SE}\nLook up pp value of that tt score given your dfdf →\\rightarrow that is how unlikely your sample mean is assuming null is true\nCompare to cutoff value\nIf pp smaller than the cutoff value, your sample mean is too unlikely →\\rightarrow reject null\nIf pp larger than cutoff value, your sample mean is within the likely values of the null; do not reject null\n\n\n\nExample: vineyard size\n\nSelect null: hectaresnull=19.8hectares_{null} = 19.8\nSet critical value derived from tdf=0.05t_{df}  = 0.05\ntscoredifference=19−19.83.2=−0.305tscore_{difference}=\\frac{19-19.8}{3.2}=-0.305\nLook up p value of that t score given your df →\\rightarrow that is how unlikely your sample is assuming null is true\n\n\n\n\n\n\n\n\n\n\nCompare to cutoff value: 0.025 &lt; 0.381 &lt; 0.975 →\\rightarrow cannot reject null\n\n\n\nInterpretation\n\nEither provides you with same information; how likely is your sample to be the same as H0H_0\nCI specifies the range of likely values\npp value specifies the specific likelihood\nPractically, pp value often more important\n\nYou can set a cutoff value but reader also needs to know how unlikely your result is\nMaybe they think another cutoff value more important"
+  },
+  {
+    "objectID": "lectures/lecture.3.4.html#interpreting-p-values",
+    "href": "lectures/lecture.3.4.html#interpreting-p-values",
+    "title": "Hypothesis Testing Wisdom",
+    "section": "Interpreting pp values",
+    "text": "Interpreting pp values\n\npp value is a conditional probability\n\nThe pp value is the probability of getting results as unusual as observed given that H0H_0 is true.\n\npvalue=p(observedstatistic|H0istrue)p value = p(observed\\ statistic | H_0\\ is\\ true)\npvalue≠p(H0istrue|observedstatistic)p value\\neq p(H_0\\ is\\ true | observed\\ statistic)\n\nThe pp value never gives a probability that H0H_0 is true.\n\npvalue=0.03pvalue = 0.03 does not mean a 3% chance of H0H_0 being correct.\nIt just says that if H0H_0 is correct, then there would be a 3% chance of observing a statistic value more unlike what was observed.\n\n\n\n\nSmall pp values\n\nA smaller pp value provides stronger evidence against H0H_0.\n\nThis does not mean that H0H_0 is less true.\nThe person is not more guilty, you just are more convinced of the guilt.\n\nThere is no hard and fast rule on how small is small enough.\n\nHow believable is H0H_0?\nDo you trust your data?\n\n\n\n\nHow guilty is the suspect?\n\nA bank robbery trial:\n\nBoth robber and defendant are male and same height and weight.\n\npp value getting smaller\n\nRobber wore blue jacket like one found in trash near defendant’s house.\n\npp value still smaller\n\n\nEvidence rolls in, pp value small enough, “beyond reasonable doubt”\n\nHowever, does not make him any guiltier\nJust more confident that made right decision"
+  },
+  {
+    "objectID": "lectures/lecture.3.4.html#alpha-levels-and-critical-values",
+    "href": "lectures/lecture.3.4.html#alpha-levels-and-critical-values",
+    "title": "Hypothesis Testing Wisdom",
+    "section": "Alpha levels and critical values",
+    "text": "Alpha levels and critical values\n\nHow to define “rare enough”\n\nNeed to make a decision whether pp value is low enough to reject H0H_0.\nSet a threshold value, called the alpha level (α\\alpha).\npvalue&lt;αpvalue &lt; \\alpha:\n\nReject H0H_0.\nThe results are statistically significant (may not be practically significant!!)\n\nCommon α\\alpha levels are 0.10, 0.05, 0.01, and 0.001.\n0.05 is often used.\nSelect α\\alpha level before collecting data.\n\n\n\nSignificance level\n\nα\\alpha is also called the significance level.\nWhen reject null hypothesis, test is “significant at that level”\nReject the null hypothesis “at the 5% significance level”\nAutomatic nature may be uncomfortable\npp value slightly above alpha level, not allowed to reject the null\npp value slightly below the alpha level leads to rejection\nIf this bothers you, you’re in good company.\nReport the pp value.\n\n\n\nCritical value\n\nFor every null model, an α\\alpha level specifies an area under the curve\nThe cutpoint for that area is called a critical value.\nNormal model: critical value is z*z^*\ntt model: critical value is t*t^*\nWe have used critical values of 1, 2, and 3 when we talked about the 68-95-99.7 Rule.\nLikely to choose α\\alpha levels like 0.1, 0.05, 0.01, or 0.001, with corresponding z*z^* critical values of 1.645, 1.96, 2.576, and 3.29.\nFor a one-sided alternative, divide the α\\alpha level in half."
+  },
+  {
+    "objectID": "lectures/lecture.3.4.html#practical-vs-statistical-significance",
+    "href": "lectures/lecture.3.4.html#practical-vs-statistical-significance",
+    "title": "Hypothesis Testing Wisdom",
+    "section": "Practical vs statistical significance",
+    "text": "Practical vs statistical significance\n\nPractical vs statistical significance\n\nStatistical significance\n\npvalue&lt;αpvalue &lt; \\alpha\nIf you don’t know the α\\alpha level, then you don’t know what “significant” means.\nSometimes used to suggest meaningful or important.\nTest with small pp value may be surprising\nBut says nothing about the size of the effect\nThat’s what determines whether the effect makes a difference.\nDon’t be lulled into thinking a statistical significance carries with it any sense of practical importance.\n\n\n\n\nEffect size\n\nPractical significance\n\nReject null hypothesis – care about the actual change or difference in the data\nEffect size – difference between data value and null value\nLarge samples – even a small, unimportant effect size can be statistically significant\nSample not large enough – even a large financially or scientifically important effect may not be statistically significant\nReport CI, pp value – indicates range of plausible values\nCI centered on the observed effect, puts bounds on how big or small the effect size may actually be\n\n\nIf we were making a new drug, what would a reasonable effect size be? What are the factors we should consider? How about when testing the new drug’s safety?"
+  },
+  {
+    "objectID": "lectures/lecture.3.4.html#hypothesis-testing-errors",
+    "href": "lectures/lecture.3.4.html#hypothesis-testing-errors",
+    "title": "Hypothesis Testing Wisdom",
+    "section": "Hypothesis testing errors",
+    "text": "Hypothesis testing errors\n\nType I and Type II errors\n\n\n\nType I and Type II errors\n\n\n\n\nType I and Type II errors\n\nType I Error\n\nReject H0H_0 when H0H_0 is true.\n\nType II Error\n\nFail to reject H0H_0 when H0H_0 is false.\n\nMedicine: such as an AIDS test\n\nType I Error →\\rightarrow false positive: patient thinks he has the disease when he doesn’t.\nType II Error →\\rightarrow false negative: patient is told he is disease - free when in fact he has the disease.\n\nJury Decisions\n\nType I: found guilty when the defendant is innocent. Put an innocent person in jail.\nType II: not enough evidence to convict, but was guilty. A murderer goes free.\n\n\n\n\nType I and Type II errors\n\nAs usual, when we conduct a statistical test of significance, we make a statement whether we can accept or reject the null hypothesis at some confidence level (usually 0.05)\nWe may be right or wrong – we never know the true state of the world, only the information obtained in our sample\n\n\n\nType I and Type II errors\n\nSo why not just set significance level at some very high level then? Why not only accept at the 0.001 level?\nSetting a cutoff is actually a tradeoff between Type I vs. Type II statistical errors\nIf a researcher claims support for the research hypothesis with a significant result when, in fact, variations in results are caused by random variables alone, then a Type I error is said to have occurred.\nThrough poor design or faulty sampling, researchers may fail to achieve significance, even though the effect they were attempting to demonstrate actually does exist. In this case it would be said that they had made a Type II error.\n\n\n\nType I and Type II errors\n\n\n\nProbability continuum\n\n\n\n\nProbabilities of Type I and Type II errors\n\np(TypeIError)=αp(Type\\ I\\ Error) = \\alpha\n\nThis represents the probability that if H0H_0 is true then we will reject H0H_0\n\np(TypeIIError)=βp(Type\\ II\\ Error) = \\beta\n\nWe cannot calculate β\\beta. Saying H0H_0 is false does not tell us what the parameter is\n\nDecreasing α\\alpha results in an increase of β\\beta\nReduce β\\beta for all alternatives, by increasing α\\alpha\nThe only way to decrease both is to increase the sample size\n\n\n\nExample: thinking about errors\n\nThe study found patients who took a certain drug to help with diabetes management have an increased risk of heart attack.\nWhat kind of error if their findings were due to chance?\nH0H_0 is true but they rejected H0H_0.\n\nType I error\n\nPatients would be deprived of the diabetes drug’s benefits when there is no increased risk of heart attack.\n\nWhy shouldn’t we try to minimize Type I errors at all costs? What are some scenarios where a Type II error is actually more serious?"
+  },
+  {
+    "objectID": "lectures/lecture.3.4.html#power-of-a-test",
+    "href": "lectures/lecture.3.4.html#power-of-a-test",
+    "title": "Hypothesis Testing Wisdom",
+    "section": "Power of a test",
+    "text": "Power of a test\n\nWhat we really want to do is to detect a false null hypothesis.\nWhen H0H_0 is false and we reject it, we have done the right thing.\nA test’s ability to detect a false null hypothesis is called the power of the test.\nPower = 1 – β\\beta\nIf a study fails to reject H0H_0, either:\n\nH0H_0 was true. No error was made.\nH0H_0 is false. Type II error was made.\nJury trial, power: ability of criminal justice system to convict people who are guilty—a good thing!\n\n\n\nExample: errors and power\n\nThe meta study resulted in a larger study of 47 different trials.\nHow could this larger sample size help?\nIf the drug really did increase the chance of heart attack, doctors needed to know.\nMissing this side effect would be a Type II error.\nIncreasing the sample size increases the power of the analysis, increasing the chance of detecting the danger if there is one.\n\n\n\nEffect size\n\nFor same sample size, larger effect size results in higher power\nA small effect size is difficult to detect, high probability of Type II error, lower power\nPower depends on effect size and standard deviation.\nThe effect size depends on “How big a difference would matter?”\n\nIn detecting the “human energy field” would a 53% or a 75% success rate be remarkable?\n\n\n\n\nEffect size\n\nWhen designing an experiment, need to know what effect size would be meaningful\n\nImportant to specify this before conducting your study/experiment\n\nAlso useful to have an expectation about how variable your data are likely to be\nWith those estimates, and a little algebra, you can get an estimate of your required nn\nTo know how variable the data may be, you may need to run a “pilot” study or base calculations on previous similar studies.\nIf you fail to reject H0H_0 hypothesis, then consider whether test had sufficient power.\n\n\n\nExample: sample size, errors, and power\n\nThe diabetes drug manufacturer looked at the study and rebutted that the sample size was too small.\nWhy would this smaller study have been less likely to detect a difference in risks?\n\nSmall studies have more sampling variability.\nSmall studies have less power.\nHard to discern whether the difference is due to chance: Higher p(TypeII)p(Type\\ II), since p(TypeI)p(Type\\ I) is fixed by the FDA.\nLarge studies can reduce the risk of both errors.\nLarger studies are better but very expensive."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Course Introduction",
+    "section": "",
+    "text": "Monday/Wednesday class at 12:00 pm to 2:30 pm in IB2071 (except February 12 - IB 2028)\nWednesday lab 2:45 pm to 4:00 pm in IB2071\nOffice hours -\n\nTuesday 10:00 am to 12:00 pm in WDR 3114\nTuesday 1:30 pm to 3:30 pm in WDR 3114\n\nHomeworks are all due at 11:59 pm\nAll other announcements and information are posted on the class Canvas site"
+  },
+  {
+    "objectID": "index.html#assessment",
+    "href": "index.html#assessment",
+    "title": "Course Introduction",
+    "section": "Assessment",
+    "text": "Assessment\n\nBeginning of class warmup quiz 10%: At the start of each class session there will be a series of short online questions to start discussion of the class material. I will drop your two lowest quiz grades. I will also curve the grade such that the student with the highest overall quiz grade will receive 100% and all other students will receive a corresponding boost to their grade.\nHomework 60%: At the end of the first two groups of content, a homework will be assigned that will ask you to analyze a dataset and answer questions related to that concept group. These homeworks are due at the noted date at 11:59 pm China time. Each homework will also have a best graph contest, where the person whose classmates vote as having the best graph wins some extra credit points.\n\nHomework 1: 15%\nHomework 2: 20%\nFinal project: 25%\n\nHomework checks 3%: To make sure you are making good progress on your homework, the Sunday before the homework is due (except for the first homework) you will be required to submit your progress on the homework so far. You are required to have tried to have answered all the questions covered by the lectures and textbook up to the specified cutoff. I will not check your answers but rather check to see if you have made a good effort to answer all the questions derived from the material already covered. If you have a reasonable answer for each question checked you will get full points. If you have not made an effort to answer all the questions reviewed you will get a zero.\nUnit 3 exam 20%: Unit 3 comprehension is better checked through an in-class exam. The exam will be open notes but closed book and will take place during the normal lab session that week.\nData Camp labs 5%: A number of labs on the website Data Camp will be assigned to you; these labs are pass/fail and you will receive full credit if you complete each of the labs by the specified due date.\nSyllabus quiz 1%: A short quiz after the first class regarding the course requirements.\nPlacement exams 1%: A short quiz that you will take at both the start and end of class to measure how much pre-knowledge you have and how much knowledge you have gained during the course. Exams are pass/fail depending on if you complete them or not\nExtra credit maximum 3%: You have several opportunities to earn extra credit. There will be three graph contests, whereby the student who is voted by the other students as having the best graph will receive extra credit points. You can also earn some extra credit by replying to other students who post problems in the Discussion section of the Canvas website."
+  },
+  {
+    "objectID": "index.html#lateness-policy",
+    "href": "index.html#lateness-policy",
+    "title": "Course Introduction",
+    "section": "Lateness policy",
+    "text": "Lateness policy\nSince the course moves very quickly, if you are submitting work late that means you are falling behind on other material and it may be difficult for you to recover. Therefore, I have a fairly strict lateness policy.\n\nAll major assignments are due at 11:59:00 pm. Not 11:59:01 or 11:59:31.\nIf it is later than 11:59:00 pm, then the assignment will be assessed a 5% lateness penalty\nIf it is later than 12:29:00 am, then the assignment will be assessed a 10% lateness penalty\nIf it is later than 11:59:00 pm the next day, the assignment will be assessed a 50% lateness penalty\nIf it is later than 2 days from the due date, I will no longer accept the assignment\n\n\nPlease be sure to check that your homework is complete and make sure to submit it a few minutes early. You can submit multiple times on Teams so make sure you have a nearly complete version uploaded even if you want to keep working on it right up to the deadline. I will not be sympathetic to messages that complain of computer problems when you are trying to submit for the first time at 11:58:51 pm."
+  },
+  {
+    "objectID": "index.html#attendance-policy",
+    "href": "index.html#attendance-policy",
+    "title": "Course Introduction",
+    "section": "Attendance Policy",
+    "text": "Attendance Policy\nClass will be highly interactive and therefore it is to your advantage to attend class. I do not take roll but if you are not in class for the beginning of class quiz there is no opportunity to make it up without a valid excused absence (doctor’s note, absence arranged in advance, etc.). The lecture will have a number of points on which I will ask students to modify some code and return a result and doing these exercises is mandatory. If you are called on to provide your solution but are not attending the lecture without previously notifying me, it will also be quite embarrassing for you!"
+  },
+  {
+    "objectID": "index.html#contact-policy",
+    "href": "index.html#contact-policy",
+    "title": "Course Introduction",
+    "section": "Contact Policy",
+    "text": "Contact Policy\n\nI usually try to reply to emails on the same day (though not in the evenings), however responses may be slower on the weekend\nDo not email me 2 hours before a homework is due and expect an immediate response!\nFor general questions, such as how should one interpret a question on a homework or quiz, you should ask the question in the Discussion section of the Canvas website. That way others can benefit from the response or someone else may be able to answer more quickly than I can. If you email me a question that really belongs in the help channel I will ask you to repost it.\nMany questions can be answered by carefully checking the class website or reviewing the materials in on Canvas. If in doubt, though, feel free to ask."
+  },
+  {
+    "objectID": "index.html#chatgpt-and-similar-policy",
+    "href": "index.html#chatgpt-and-similar-policy",
+    "title": "Course Introduction",
+    "section": "ChatGPT (and similar) Policy",
+    "text": "ChatGPT (and similar) Policy\nUnless otherwise specified on an assignment, you may use ChatGPT as much as you wish. However, most of the assignments in this class are not very amenable to ChatGPT help. Your main grade will be understanding, annotating, and interpreting your output. Producing the output is the very simple minimal requirement. Also, ChatGPT often makes many coding mistakes. If you rely too much on ChatGPT to code, you will not understand when it makes mistakes and why it makes mistakes."
+  },
+  {
+    "objectID": "index.html#academic-dishonesty-policy",
+    "href": "index.html#academic-dishonesty-policy",
+    "title": "Course Introduction",
+    "section": "Academic Dishonesty Policy",
+    "text": "Academic Dishonesty Policy\nDon’t cheat. Don’t be that person. Yes, you. You know exactly what I’m talking about too.\nMore specifically, you are expected to strictly adhere to the Duke Kunshan University Community Standard in all of your work and participation, and violations will be enforced. More details can be found here.\nAll work must be done exclusively by the individual to whom it has been assigned. You should assume that collaboration on assignments, the use of previously-assigned homework, quizzes and answer keys, outside sources or outside aids (both written and electronic) are not allowed unless explicitly noted in the assignment guidelines or in this syllabus. All cases of suspected cheating will be referred for adjudication to the Dean’s Office. Any violation for which a student is found responsible is considered grounds for failure in the course.\nIt may sound cliché to say, but if you cheat and borrow other’s code or answers you are only cheating yourself; you will not learn how to do statistics and doing so will mean you will do worse on the midterm and the final anyway. Cheating is ultimately self-defeating so for both of our benefit, please, don’t do it. If you are having trouble completing the assignment and feel tempted to cheat, please contact me directly instead with the difficulties you are having."
+  },
+  {
+    "objectID": "index.html#disabilities-policy",
+    "href": "index.html#disabilities-policy",
+    "title": "Course Introduction",
+    "section": "Disabilities Policy",
+    "text": "Disabilities Policy\nIf you need an accommodation due to a disability, you should not hesitate to request one. The process is that requests should be sent to the Dean of Undergraduate Studies, who will contact me with recommended type of accommodation that is needed. You do not need to disclose your reason for requesting an accommodation with me, and asking through the Dean of Undergraduate Studies helps make things official for both you and me."
+  },
+  {
+    "objectID": "homework.html",
+    "href": "homework.html",
+    "title": "Homework",
+    "section": "",
+    "text": "Unit 1 homework (due Sunday, January 19 at 23:59:00)\n\nUnit 1 homework\nUnit 1 homework sample solutions\n\n\n\nUnit 2 homework (due Tuesday, February 4 at 23:59:00)\n\nUnit 2 homework\n[Unit 2 homework sample solutions]\n\n\n\nUnit 3 exam (Wednesday, February 19 from 2:45 to 4:00 pm)\n\n[Unit 3 exam]\n[Unit 3 exam sample solutions]\n\n\n\nFinal project (due Wednesday, March 5 at 23:59:00)\n\n[Final project]"
+  },
+  {
     "objectID": "schedulematerials.html",
     "href": "schedulematerials.html",
     "title": "Course Schedule and Class Materials",
@@ -336,18 +462,11 @@
     "text": "Lecture 3.3: Hypothesis testing (Wednesday, February 12)\n\nNote the special class location! - IB 2028\n\nReading to do before class: Chapter 15\nTopics covered:\n\nWhat are hypotheses?\n\\(p\\) values\n\\(p\\) values and decisions – how to make a decision\nLecture webpage: Lecture 3.3\nLecture activity: Lecture 3.3 activity"
   },
   {
-    "objectID": "schedulematerials.html#lab-3.1-bootstrapping-wednesday-february-12",
-    "href": "schedulematerials.html#lab-3.1-bootstrapping-wednesday-february-12",
-    "title": "Course Schedule and Class Materials",
-    "section": "Lab 3.1: Bootstrapping (Wednesday, February 12)",
-    "text": "Lab 3.1: Bootstrapping (Wednesday, February 12)\n\nLab files: [Lab 3.1]"
-  },
-  {
     "objectID": "schedulematerials.html#lecture-3.4-hypothesis-testing-wisdom-monday-february-17",
     "href": "schedulematerials.html#lecture-3.4-hypothesis-testing-wisdom-monday-february-17",
     "title": "Course Schedule and Class Materials",
     "section": "Lecture 3.4: Hypothesis testing wisdom (Monday, February 17)",
-    "text": "Lecture 3.4: Hypothesis testing wisdom (Monday, February 17)\nReading to do before class: Chapter 16\nTopics covered:\n\nInterpreting p-values\nAlpha and critical values\nPractical vs. statistical significance\nType I and II errors\nPower of a test\nLecture webpage: [Lecture 3.4]\nLecture activity: [Lecture 3.4 activity]"
+    "text": "Lecture 3.4: Hypothesis testing wisdom (Monday, February 17)\nReading to do before class: Chapter 16\nTopics covered:\n\nInterpreting p-values\nAlpha and critical values\nPractical vs. statistical significance\nType I and II errors\nPower of a test\nLecture webpage: Lecture 3.4\nLecture activity: Lab 3.1 makeup"
   },
   {
     "objectID": "schedulematerials.html#lecture-4.1-comparing-groups-wednesday-february-19",
@@ -404,69 +523,6 @@
     "title": "Course Schedule and Class Materials",
     "section": "Final project (due Wednesday, March 5 at 23:59:00)",
     "text": "Final project (due Wednesday, March 5 at 23:59:00)\n\nHomework files: Final project instructions"
-  },
-  {
-    "objectID": "homework.html",
-    "href": "homework.html",
-    "title": "Homework",
-    "section": "",
-    "text": "Unit 1 homework (due Sunday, January 19 at 23:59:00)\n\nUnit 1 homework\nUnit 1 homework sample solutions\n\n\n\nUnit 2 homework (due Tuesday, February 4 at 23:59:00)\n\nUnit 2 homework\n[Unit 2 homework sample solutions]\n\n\n\nUnit 3 exam (Wednesday, February 19 from 2:45 to 4:00 pm)\n\n[Unit 3 exam]\n[Unit 3 exam sample solutions]\n\n\n\nFinal project (due Wednesday, March 5 at 23:59:00)\n\n[Final project]"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Course Introduction",
-    "section": "",
-    "text": "Monday/Wednesday class at 12:00 pm to 2:30 pm in IB2071 (except February 12 - IB 2028)\nWednesday lab 2:45 pm to 4:00 pm in IB2071\nOffice hours -\n\nTuesday 10:00 am to 12:00 pm in WDR 3114\nTuesday 1:30 pm to 3:30 pm in WDR 3114\n\nHomeworks are all due at 11:59 pm\nAll other announcements and information are posted on the class Canvas site"
-  },
-  {
-    "objectID": "index.html#assessment",
-    "href": "index.html#assessment",
-    "title": "Course Introduction",
-    "section": "Assessment",
-    "text": "Assessment\n\nBeginning of class warmup quiz 10%: At the start of each class session there will be a series of short online questions to start discussion of the class material. I will drop your two lowest quiz grades. I will also curve the grade such that the student with the highest overall quiz grade will receive 100% and all other students will receive a corresponding boost to their grade.\nHomework 60%: At the end of the first two groups of content, a homework will be assigned that will ask you to analyze a dataset and answer questions related to that concept group. These homeworks are due at the noted date at 11:59 pm China time. Each homework will also have a best graph contest, where the person whose classmates vote as having the best graph wins some extra credit points.\n\nHomework 1: 15%\nHomework 2: 20%\nFinal project: 25%\n\nHomework checks 3%: To make sure you are making good progress on your homework, the Sunday before the homework is due (except for the first homework) you will be required to submit your progress on the homework so far. You are required to have tried to have answered all the questions covered by the lectures and textbook up to the specified cutoff. I will not check your answers but rather check to see if you have made a good effort to answer all the questions derived from the material already covered. If you have a reasonable answer for each question checked you will get full points. If you have not made an effort to answer all the questions reviewed you will get a zero.\nUnit 3 exam 20%: Unit 3 comprehension is better checked through an in-class exam. The exam will be open notes but closed book and will take place during the normal lab session that week.\nData Camp labs 5%: A number of labs on the website Data Camp will be assigned to you; these labs are pass/fail and you will receive full credit if you complete each of the labs by the specified due date.\nSyllabus quiz 1%: A short quiz after the first class regarding the course requirements.\nPlacement exams 1%: A short quiz that you will take at both the start and end of class to measure how much pre-knowledge you have and how much knowledge you have gained during the course. Exams are pass/fail depending on if you complete them or not\nExtra credit maximum 3%: You have several opportunities to earn extra credit. There will be three graph contests, whereby the student who is voted by the other students as having the best graph will receive extra credit points. You can also earn some extra credit by replying to other students who post problems in the Discussion section of the Canvas website."
-  },
-  {
-    "objectID": "index.html#lateness-policy",
-    "href": "index.html#lateness-policy",
-    "title": "Course Introduction",
-    "section": "Lateness policy",
-    "text": "Lateness policy\nSince the course moves very quickly, if you are submitting work late that means you are falling behind on other material and it may be difficult for you to recover. Therefore, I have a fairly strict lateness policy.\n\nAll major assignments are due at 11:59:00 pm. Not 11:59:01 or 11:59:31.\nIf it is later than 11:59:00 pm, then the assignment will be assessed a 5% lateness penalty\nIf it is later than 12:29:00 am, then the assignment will be assessed a 10% lateness penalty\nIf it is later than 11:59:00 pm the next day, the assignment will be assessed a 50% lateness penalty\nIf it is later than 2 days from the due date, I will no longer accept the assignment\n\n\nPlease be sure to check that your homework is complete and make sure to submit it a few minutes early. You can submit multiple times on Teams so make sure you have a nearly complete version uploaded even if you want to keep working on it right up to the deadline. I will not be sympathetic to messages that complain of computer problems when you are trying to submit for the first time at 11:58:51 pm."
-  },
-  {
-    "objectID": "index.html#attendance-policy",
-    "href": "index.html#attendance-policy",
-    "title": "Course Introduction",
-    "section": "Attendance Policy",
-    "text": "Attendance Policy\nClass will be highly interactive and therefore it is to your advantage to attend class. I do not take roll but if you are not in class for the beginning of class quiz there is no opportunity to make it up without a valid excused absence (doctor’s note, absence arranged in advance, etc.). The lecture will have a number of points on which I will ask students to modify some code and return a result and doing these exercises is mandatory. If you are called on to provide your solution but are not attending the lecture without previously notifying me, it will also be quite embarrassing for you!"
-  },
-  {
-    "objectID": "index.html#contact-policy",
-    "href": "index.html#contact-policy",
-    "title": "Course Introduction",
-    "section": "Contact Policy",
-    "text": "Contact Policy\n\nI usually try to reply to emails on the same day (though not in the evenings), however responses may be slower on the weekend\nDo not email me 2 hours before a homework is due and expect an immediate response!\nFor general questions, such as how should one interpret a question on a homework or quiz, you should ask the question in the Discussion section of the Canvas website. That way others can benefit from the response or someone else may be able to answer more quickly than I can. If you email me a question that really belongs in the help channel I will ask you to repost it.\nMany questions can be answered by carefully checking the class website or reviewing the materials in on Canvas. If in doubt, though, feel free to ask."
-  },
-  {
-    "objectID": "index.html#chatgpt-and-similar-policy",
-    "href": "index.html#chatgpt-and-similar-policy",
-    "title": "Course Introduction",
-    "section": "ChatGPT (and similar) Policy",
-    "text": "ChatGPT (and similar) Policy\nUnless otherwise specified on an assignment, you may use ChatGPT as much as you wish. However, most of the assignments in this class are not very amenable to ChatGPT help. Your main grade will be understanding, annotating, and interpreting your output. Producing the output is the very simple minimal requirement. Also, ChatGPT often makes many coding mistakes. If you rely too much on ChatGPT to code, you will not understand when it makes mistakes and why it makes mistakes."
-  },
-  {
-    "objectID": "index.html#academic-dishonesty-policy",
-    "href": "index.html#academic-dishonesty-policy",
-    "title": "Course Introduction",
-    "section": "Academic Dishonesty Policy",
-    "text": "Academic Dishonesty Policy\nDon’t cheat. Don’t be that person. Yes, you. You know exactly what I’m talking about too.\nMore specifically, you are expected to strictly adhere to the Duke Kunshan University Community Standard in all of your work and participation, and violations will be enforced. More details can be found here.\nAll work must be done exclusively by the individual to whom it has been assigned. You should assume that collaboration on assignments, the use of previously-assigned homework, quizzes and answer keys, outside sources or outside aids (both written and electronic) are not allowed unless explicitly noted in the assignment guidelines or in this syllabus. All cases of suspected cheating will be referred for adjudication to the Dean’s Office. Any violation for which a student is found responsible is considered grounds for failure in the course.\nIt may sound cliché to say, but if you cheat and borrow other’s code or answers you are only cheating yourself; you will not learn how to do statistics and doing so will mean you will do worse on the midterm and the final anyway. Cheating is ultimately self-defeating so for both of our benefit, please, don’t do it. If you are having trouble completing the assignment and feel tempted to cheat, please contact me directly instead with the difficulties you are having."
-  },
-  {
-    "objectID": "index.html#disabilities-policy",
-    "href": "index.html#disabilities-policy",
-    "title": "Course Introduction",
-    "section": "Disabilities Policy",
-    "text": "Disabilities Policy\nIf you need an accommodation due to a disability, you should not hesitate to request one. The process is that requests should be sent to the Dean of Undergraduate Studies, who will contact me with recommended type of accommodation that is needed. You do not need to disclose your reason for requesting an accommodation with me, and asking through the Dean of Undergraduate Studies helps make things official for both you and me."
   },
   {
     "objectID": "lectures/lecture.3.3.html#hypotheses",
@@ -725,7 +781,7 @@
     "href": "rmanual.html#helpful-summary-functions",
     "title": "R Manual",
     "section": "Helpful summary functions",
-    "text": "Helpful summary functions\n\nSummarizing data\nThe simpliest way to summarize data is the summary() command.\n\nsummary(mtcars$mpg)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  10.40   15.43   19.20   20.09   22.80   33.90 \n\n\nTo develop more complex summary statistics, you can use longer piped structures from dplyr as follows:\n\nmtcars %&gt;%\n  group_by(cyl) %&gt;%\n  summarise(mean = mean(wt), n = n())\n\n# A tibble: 3 × 3\n    cyl  mean     n\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1     4  2.29    11\n2     6  3.12     7\n3     8  4.00    14\n\n\nTo view more samples of the summarize() function, see here:\nSummarize documetation\n\n\nFinding normal distribution & quantile information\nIf you want to find out details of the normal distribution, there are a suite of function in R that can report the quantile of a specific number of standard deviations from the center of a normal distribution or the reverse.\n\n# What is the amount of area under the normal curve cumulative up to +2 sd from the mean \npnorm(2, mean=0, sd=1)\n\n[1] 0.9772499\n\n# At how many standard deviations away from the mean is 97.5% of the area under the normal curve\nqnorm(0.975, mean=0, sd=1)\n\n[1] 1.959964\n\n\nIf you have an arbitrary distribution (that may not necessarily be normally distributed), you can find a quantile for a given percentage of area under the curve with the quantile() function.\n\n# generate a uniform distribution\ndist&lt;-runif(1000, min=0, max=1)\n\n# theoretically, the quantile should match the probability for a uniform distribution\nquantile(dist, probs=0.5)\n\n      50% \n0.5113371"
+    "text": "Helpful summary functions\n\nSummarizing data\nThe simpliest way to summarize data is the summary() command.\n\nsummary(mtcars$mpg)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  10.40   15.43   19.20   20.09   22.80   33.90 \n\n\nTo develop more complex summary statistics, you can use longer piped structures from dplyr as follows:\n\nmtcars %&gt;%\n  group_by(cyl) %&gt;%\n  summarise(mean = mean(wt), n = n())\n\n# A tibble: 3 × 3\n    cyl  mean     n\n  &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt;\n1     4  2.29    11\n2     6  3.12     7\n3     8  4.00    14\n\n\nTo view more samples of the summarize() function, see here:\nSummarize documetation\n\n\nFinding normal distribution & quantile information\nIf you want to find out details of the normal distribution, there are a suite of function in R that can report the quantile of a specific number of standard deviations from the center of a normal distribution or the reverse.\n\n# What is the amount of area under the normal curve cumulative up to +2 sd from the mean \npnorm(2, mean=0, sd=1)\n\n[1] 0.9772499\n\n# At how many standard deviations away from the mean is 97.5% of the area under the normal curve\nqnorm(0.975, mean=0, sd=1)\n\n[1] 1.959964\n\n\nIf you have an arbitrary distribution (that may not necessarily be normally distributed), you can find a quantile for a given percentage of area under the curve with the quantile() function.\n\n# generate a uniform distribution\ndist&lt;-runif(1000, min=0, max=1)\n\n# theoretically, the quantile should match the probability for a uniform distribution\nquantile(dist, probs=0.5)\n\n      50% \n0.5158306"
   },
   {
     "objectID": "rmanual.html#frequency-table-and-contingency-table",

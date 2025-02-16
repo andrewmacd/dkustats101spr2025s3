@@ -227,10 +227,6 @@ Topics covered:
 
 -   Lecture activity: [Lecture 3.3 activity](activities/Lecture 3.3/lecture.3.3.activity.zip)
 
-## Lab 3.1: Bootstrapping (Wednesday, February 12)
-
--   Lab files: [Lab 3.1]
-
 ## Lecture 3.4: Hypothesis testing wisdom (Monday, February 17)
 
 Reading to do before class: Chapter 16
@@ -247,9 +243,9 @@ Topics covered:
 
 - Power of a test
 
--   Lecture webpage: [Lecture 3.4]
+-   Lecture webpage: [Lecture 3.4](lectures/lecture.3.4.html)
 
--   Lecture activity: [Lecture 3.4 activity]
+-   Lecture activity: [Lab 3.1 makeup](activities/Lecture 3.4/lab.3.1.zip)
 
 # Unit 4: Statistical inference
 
