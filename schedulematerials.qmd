@@ -263,9 +263,9 @@ Topics covered:
 
 -   Two-sample $t$ test
 
--   Lecture webpage: [Lecture 4.1]
+-   Lecture webpage: [Lecture 4.1](lectures/lecture.4.1.html)
 
--   Lecture activity: [Lecture 4.1 activity]
+-   Lecture activity: [Lecture 4.1 activity](activities/Lecture 4.1/lecture.4.1.activity.zip)
 
 ## In-class Unit 3 exam: Wednesday, February 19 from 2:45 pm to 4:00 pm
 
