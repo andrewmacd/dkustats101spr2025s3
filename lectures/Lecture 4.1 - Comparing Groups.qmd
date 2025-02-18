@@ -157,13 +157,14 @@ kable(review.table) %>%
 #| label: tbl-inferenceexample
 #| tbl-cap: "Inference example"
 #| echo: false
+#| warning: false
 cnames <- c("One mean test", "Two mean test")
 col1 <- c("$H_0$: Our sample mean of hours of sleep is the same as all students in the world", "$H_a$: Our sample mean is different than the world's population mean")
 col2 <- c("$H_0$: The sample mean of male students hours slept is the same as the mean of female students hours slept", "$H_a$: The sample mean of female students is different than the sample mean of male students")
 review.table <- data.frame(col1, col2)
 colnames(review.table) <- cnames
 
-kable(review.table) %>% 
+kable(review.table, format="markdown") %>% 
   kable_styling()
 ```
 
