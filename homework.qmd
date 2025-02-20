@@ -14,9 +14,6 @@ title: "Homework"
 
 # Unit 3 exam (Wednesday, February 19 from 2:45 to 4:00 pm) 
 
-  - [Unit 3 exam]
-  - [Unit 3 exam sample solutions]
-
 # Final project (due Wednesday, March 5 at 23:59:00) 
 
-  - [Final project]
+  - [Final project](homeworks/Final Project/final.project.zip)

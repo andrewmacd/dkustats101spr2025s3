@@ -1,0 +1,107 @@
+---
+title: "Stats 101 Spring 2025 S3 Final Project"
+subtitle: "White Wine Analysis"
+author: "Anonymous"
+date: "today"
+output:
+  html_document:
+    toc: true
+format: 
+  html:
+    embed-resources: true
+    html-math-method: mathml
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+# Put your libraries and dataset loading code here.
+```
+
+![](whitewine.jpg)
+
+# Assignment instructions
+
+White wine has [recently surpassed](https://www.everydaydrinking.com/p/why-white-wine-is-the-future-of-wine) red wine in total wine sales and is becoming increasingly popular in [China](https://vino-joy.com/2024/10/02/white-wine-booms-in-china-as-summer-heat-fuels-a-refreshing-shift-in-tastes/). Imagine you have been newly hired by a Chinese wine importing company interested in importing high quality white wines to sell to Chinese consumers. One of the problems of importing wines is that the company must confirm plans to purchase the wine before the wine is released to the market and customers can give their reviews. Knowing the general features of which wines are popular before the wine is released to the market could give your company a significant competitive advantage.  
+
+Your firm therefore asks you to create a model of wine quality that factors in weather (each year's quality of wine can vary significantly according to the weather) and other important variables to determine what features of wines lead to high ratings for a wine so the firm can make more informed purchasing decisions. Your boss hands you this dataset and asks you to generate a business report using the `White_Weather.csv` data file (original data file from [here](https://www.kaggle.com/datasets/abcd334/wine-growth-weather)).
+
+Key features of the data:
+
+- Reviews and characteristics of the wine are from the wine rating app Vivino
+- Weather data is described by month and collected from Open-Meteo.com
+
+You will need to use all the material we learned in class to:
+
+1.  Think carefully about the sampling frame, what your research expectations and questions are, and how the method of data collection can influence your findings
+2.  Interpret summary data
+3.  Examine important bi-variate relationships
+4.  Construct a high-quality regression model of `Rating` and at least one weather variable plus any other relevant explanatory variables
+5.  Interpret this model, including ALL relevant diagnostics and $p$ values.
+6.  Propose a plan to the importer on what white wines the importer should focus on and why
+7.  Also note the limitations of the report and what other data you think the decisionmaker should consider before reaching a final conclusion
+
+## Specific requirements
+
+-   Save this document as a new document (Save As...) and rename it `White_wine_report`.
+-   Rename the title of your report to `White wine report`
+-   Delete the `Assignment instructions` section and its subsections
+-   Final report should be between 2000 and 3000 words
+    -   Maximum 8 graphs
+    -   Maximum 6 tables
+-   Suggested structure:
+    -   Introduction
+    -   Literature review and hypotheses
+    -   Summary statistics
+    -   Regression interpretation
+    -   Regression diagnostics
+    -   Interpret coefficients
+    -   Proposed plan for the developer
+    -   Conclusion
+
+## Considerations
+
+Here's a **non-exhaustive** list of things you might want to do:
+
+- Rating Determinants: Analyze the relationship between key predictor variables and the rating. Explain which features (e.g., weather, price, country, etc.) are the most influential for the rating.
+
+- Weather Analysis: You may consider creating some kind of composite variable for various parts of the weather that focus on the weather only during the growing season (note that the growing season is different in the Southern Hemisphere - you may need to limit or exclude the data from this region because of it, but try to keep in this data if you think it possible/reasonable). You may need to do a bit of outside research to learn what type of weather is key for growing high quality wine grapes - if you do, please cite this research.
+
+- Variable Transformations: Consider applying transformations (e.g., log, square root) to some of the variables if they show non-linear relationship between the predictor and response variable. This could improve the accuracy of your regression model.
+
+- Model Analysis and Real-World Implications: Discuss the results of your regression model. How well does it predict rating? What are the potential real-world factors that might influence consumer interest in these wines beyond what is in your dataset?
+
+- Recommendations: Based on your analysis, provide recommendations for the company regarding which wines to import. What features or details are important in predicting a higher rating? 
+
+## Points of emphasis
+
+-   Literature review should include some expectations you develop from finding news articles or studies related to your research question. You should specifically state some hypotheses that seem likely that 1) follow from your literature review and 2) answer the question posed in the Assignment Instructions section.
+
+-   Do not exclude a variable just because it initially does not meet the regression requirements. However, consider carefully whether some variables are actually highly related to another predictor variable -- do not include collinear variables.
+
+-   You should focus your graphs and tables on that illustrating the most important information for drawing your conclusion. Choose your tables carefully such that they convey the key information needed to arrive at your conclusion. Do not make tables and graphs of irrelevant information or points that do not need discussing.
+
+-   Make sure to also interpret the coefficients. You need to interpret the impact of a one unit change in the coefficients on the response variable. You additionally need to examine whether changes in the predictor variables lead to a substantively large or small change in the predictor variable. One way to do this is examining whether changing the predictor variable from its Q1 to Q3 value leads to a large or small change in the response variable. You may want to make a table with this information.
+
+-   Your report should be a polished, quality product that you would be proud to show your boss/employer. No unnecessary printed code, poorly labeled graphs, or strange looking formatting. Use everything you have learned in this class to make a quality final product! Remember, this document is not a formal essay. Some of the differences between a business report and a formal essay are summarized in the table below and by this [link](https://students.unimelb.edu.au/academic-skills/resources/reading,-writing-and-referencing/reports/business-report-structure):
+
+![](businessreport.png){width="800"}
+
+# Introduction
+
+# Literature review and hypotheses
+
+# Summary statistics
+
+**Must have these three sections (Introduction, Literature review, and Summary statistics) done by the homework check due date (Sunday, March 2nd)**
+
+# Regression interpretation
+
+# Regression diagnostics
+
+# Interpret coefficients
+
+# Proposed plan for the importer
+
+# Conclusion
