@@ -281,9 +281,9 @@ Topics covered:
 
 -   Confidence and prediction intervals
 
--   Lecture webpage: [Lecture 4.2]
+-   Lecture webpage: [Lecture 4.2](lectures/lecture.4.2.html)
 
--   Lecture activity: [Lecture 4.2 activity]
+-   Lecture activity: [Lecture 4.2 activity](activities/Lecture 4.2/lecture.4.2.activity)
 
 ## Final class 4.3: Interpretation activity (Wednesday, February 26)
 
@@ -296,10 +296,6 @@ Topics covered:
 -   Determining possible weaknesses of the model
 
 -   Final class activity: [Final class 4.3 activity]
-
-## Lab 4.1: Model building (Wednesday, February 26)
-
--   Lab - continuation of lecture 4.2 activity
 
 ## Online lab 4.1 (due on Friday, February 28 at 11:59:00)
 
