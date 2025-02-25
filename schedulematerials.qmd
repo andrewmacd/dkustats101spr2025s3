@@ -295,7 +295,7 @@ Topics covered:
 
 -   Determining possible weaknesses of the model
 
--   Final class activity: [Final class 4.3 activity]
+-   Final class activity: [Final class 4.3 activity](activities/Final class 4.3/final.class.4.3.activity.zip)
 
 ## Online lab 4.1 (due on Friday, February 28 at 11:59:00)
 

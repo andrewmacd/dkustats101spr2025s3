@@ -1,0 +1,62 @@
+---
+title: "Final class 4.3 - Article analysis"
+author: "Professor MacDonald"
+date: "2/26/2025"
+output:
+  html_document:
+    toc: true
+format: 
+  html:
+    embed-resources: true
+---
+
+![](student.sleep.jpg){width="800"}
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Instructions
+
+Please answer the following questions regarding [this sleep study](https://www.pnas.org/doi/10.1073/pnas.2209123120). You will need your VPN on to access the study online.
+
+## Objective of the study
+
++ Review the study's two pre-registrations
+  - Write down the study's key hypotheses
+  - Why did the study authors create two preregistrations?
++ Summarize the larger issue that the article is trying to understand.
+
+## Study protocol
+
++ Please describe how the data is collected, what the sample size is, the specific response variable definition, what predictor variables were measured, and a summary of the nonresponse.
++ What problems, if any, do you see with this study given the study protocol? 
++ Does the protocol provide a good test of the hypotheses? Why or why not?
++ Do you agree with how the variables are defined to match the study concepts? 
+
+## Summary data
+
++ What does the summary data indicate about the hypotheses? 
++ How easy is it, in your opinion, to generalize the result of this sample to other situations and contexts?
+
+## Multiple regression
+
++ Are the conditions for regression met?
++ What do the results of Tables 2 & 3 tell you? 
++ Interpret the $\beta$ coefficients - is the magnitude of the $\beta$'s large or small? What are the units?
++ Can you think of any lurking variables missing from this regression?
+
+## Discussion and conclusion
+
++ Do you feel the discussion and conclusion did a good job summarizing the statistical results? 
++ How serious do you think the limitations of this study are?
+
+## Additional questions
+
++ What are some areas that you felt the author(s) of the study were unclear on? 
++ What connections between the results and the argument were unclear? 
++ Write around 5 additional questions you still have after doing a careful analysis of the article.
+
+## Additional steps
+
++ If you have extra time, download the dataset for the study and see if you can replicate the result
